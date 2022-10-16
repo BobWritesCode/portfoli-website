@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Source+Code+Pro&display=swap');
 
 :root {
   --dark-blue: rgb(0, 0, 44);
@@ -46,7 +46,7 @@ nav li {
 
 .page-container {
   width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -71,16 +71,19 @@ header p {
 }
 
 .header-top {
-  line-height: 5.3vw;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 4.0vw;
 }
 
 .header-bottom {
+  font-family: 'Source Code Pro', monospace;
   line-height: 2.5vw;
 }
 
 .header-span {
   font-size: 2vw;
   color:var(--code-blue);
+  font-family: 'Source Code Pro', monospace;
 }
 
 footer { 
