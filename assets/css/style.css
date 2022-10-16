@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 :root {
-  --dark-blue: rgb(0, 0, 63);
+  --dark-blue: rgb(0, 0, 44);
   --code-blue:rgb(151, 151, 255);
   --blue: rgb(4, 4, 123);
   --white: rgb(241, 255, 250);
   --page-border: 20vw;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,12 +44,18 @@ nav li {
   padding: 10px;
 }
 
+.page-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 var(--page-border);
-  font-size: 2.7vw;
+  margin: 0 auto;
+  font-size: calc(18px + 1vw);
   height: 100vh;
 }
 
@@ -55,7 +65,7 @@ header h1 {
 }
 
 header p {
-  font-size: 2vw;
+  font-size: calc(12px + 1vw);
   color:var(--code-blue);
 
 }
@@ -71,10 +81,6 @@ header p {
 .header-span {
   font-size: 2vw;
   color:var(--code-blue);
-}
-
-section {
-  padding: 0 var(--page-border);
 }
 
 footer { 
