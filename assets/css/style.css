@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+:root {
+  --dark-blue: rgb(0, 0, 63);
+  --code-blue:rgb(151, 151, 255);
+  --blue: rgb(4, 4, 123);
+  --white: rgb(241, 255, 250);
+  --page-border: 20vw;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark-blue);
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 20px;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--page-border);
+  font-size: 2.7vw;
+  height: 100vh;
+}
+
+header h1 {
+  padding-left: 3vw;
+  line-height: 3vw;
+}
+
+header p {
+  font-size: 2vw;
+  color:var(--code-blue);
+
+}
+
+.header-top {
+  line-height: 5.3vw;
+}
+
+.header-bottom {
+  line-height: 2.5vw;
+}
+
+.header-span {
+  font-size: 2vw;
+  color:var(--code-blue);
+}
+
+section {
+  padding: 0 var(--page-border);
+}
+
+footer { 
+  padding: 0 var(--page-border);
+}
+
+#logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#logo-container * {
+  color: var(--blue);
+}
+
+#logo-container > div {
+  margin: 20px;
+}
+
+.tech-logo {
+  height: 100px;
+}
+
+.blue-bg {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.white-bg {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.white-btn {
+  background-color: var(--white);
+  color: var(--blue);
+  border-radius: 5px;
+}
+
+
+#logo-container div {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+}
