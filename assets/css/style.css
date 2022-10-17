@@ -121,19 +121,14 @@ header p {
 
 #header-list ul {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   list-style-type: none;
 }
 
-#header-list li:first-of-type {
-  padding-left: 0;
-  margin-left: 0;
-}
-
 #header-list li {
-  margin: 0 20px;
-  padding: 10px;
+  margin: 0 20px 0 0;
+  padding: 10px 10px 10px 0;
   font-size: calc(12px + 1vw);
 }
 
