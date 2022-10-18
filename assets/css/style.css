@@ -36,10 +36,10 @@ h2 {
 
 h3 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-p {
+p, button {
   font-size: calc(12px + 0.5vw);
 }
 
@@ -48,12 +48,17 @@ a {
   text-decoration: none;
 }
 
+hr {
+  margin: 10px 0;
+  color: lightgray;
+}
+
 .orange {
-  color: var(--code-orange);
+  color: var(--code-orange) !important;
 }
 
 .gold {
-  color: var(--gold);
+  color: var(--gold) !important;
 }
 
 .full-width {
@@ -192,35 +197,50 @@ header h1 {
   font-size: calc(12px + 1vw);
 }
 
-#logos {
-  display: none;
-}
-
-/* #logos {
+#project-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  overflow: hidden;
-  background-blend-mode: overlay;
+  flex-direction: column;
 }
 
-#logos * {
-  color: var(--blue);
+#project-container > div {
+  display: flex;
+  flex-direction: row;
 }
 
-#logos > div {
-  margin: 20px;
+#project-container > div > div {
+  width: 50%;
 }
 
-#logos div {
-   padding: 0 10px;
-  text-align: center;
-} 
+#project-container td {
+  font-size: calc(12px + 0.5vw);
+  color: var(--code-orange);
+}
 
-.tech-logo {
-  height: 100px;
-}*/
+#project-container td:first-of-type {
+  padding-left: 0;
+}
+
+#project-container td:last-of-type {
+  padding-right: 0;
+}
+
+#project-container td:nth-child(even) {
+  color: white;
+  padding: 0 5px;
+}
+
+.flex-col-apart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+button {
+  background-color: var(--aqua);
+  padding: 5px;
+}
 
 .white-btn {
   background-color: var(--white);
