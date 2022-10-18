@@ -35,8 +35,8 @@ h2 {
 }
 
 h3 {
+  font-size: calc(12px + 0.5vw);
   margin-top: 20px;
-  margin-bottom: 5px;
 }
 
 p, button {
@@ -50,7 +50,7 @@ a {
 
 hr {
   margin: 10px 0;
-  color: lightgray;
+  border-color: rgb(112, 112, 112);
 }
 
 .orange {
@@ -232,14 +232,14 @@ header h1 {
 .flex-col-apart {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: flex-start;
   height: 100%;
 }
 
 button {
   background-color: var(--aqua);
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .white-btn {
