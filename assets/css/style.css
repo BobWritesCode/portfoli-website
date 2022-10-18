@@ -30,7 +30,8 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+  background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
   color: var(--white);
   margin: 0;
   padding: 0;
