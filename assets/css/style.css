@@ -99,6 +99,11 @@ nav li {
   color: var(--code-blue);
 }
 
+footer { 
+  background-color: var(--background);
+  padding: 0 var(--page-border);
+}
+
 .section-container {
   display: flex;
   flex-direction: column;
@@ -157,10 +162,6 @@ header h1 {
 
 #header-list {
   font-size: calc(12px + 1vw);
-}
-
-footer { 
-  padding: 0 var(--page-border);
 }
 
 #logo-container {
