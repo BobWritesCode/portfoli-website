@@ -229,7 +229,7 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
-  nav {
+  #sticky-nav {
     display: none;
   }
 }
