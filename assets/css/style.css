@@ -12,19 +12,6 @@
   --page-border: 20vw;
 }
 
-.orange {
-  color: var(--code-orange);
-}
-
-.gold {
-  color: var(--gold);
-}
-
-.full-width {
-  width: 100%;
-  max-width: 100%;
-}
-
 * {
   scroll-behavior: smooth;
 }
@@ -41,6 +28,43 @@ body * {
   font-family: 'Manrope', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.box p:last-of-type {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: calc(12px + 0.5vw);
+}
+
+a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.orange {
+  color: var(--code-orange);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.full-width {
+  width: 100%;
+
+  max-width: 100%;
 }
 
 td {
@@ -190,11 +214,6 @@ header h1 {
   height: 100px;
 }
 
-.blue-bg {
-  background-color: var(--background);
-  color: var(--white);
-}
-
 .white-bg {
   background-color: var(--white);
   color: var(--blue);
@@ -206,27 +225,23 @@ header h1 {
   border-radius: 5px;
 }
 
-h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+#left-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
 }
 
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+#left-icons i {
+  color: var(--white);
+  font-size: calc(8px + 0.9vw);
+  padding: 5px 0;
 }
 
-.box p:last-of-type {
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: calc(12px + 0.5vw);
-}
-
-a {
+#left-icons i:hover {
   color: var(--aqua);
-  text-decoration: none;
 }
 
 @media only screen and (max-width: 800px) {
