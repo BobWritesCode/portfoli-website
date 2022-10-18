@@ -16,13 +16,18 @@
   color: var(--code-orange);
 }
 
-.orange {
+.gold {
   color: var(--gold);
 }
 
-/** {
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+* {
   scroll-behavior: smooth;
-}*/
+}
 
 body {
   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -47,27 +52,37 @@ td {
   color: rgb(155, 155, 155);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  z-index: 99;
-  height: 52px;
+#sticky-nav {
+  display: block;
+  flex-direction: row;
   position: sticky;
   top: 0;
-  width: 100vw;
   background-color: var(--background);
+  z-index: 99;
 }
 
-nav a{
+#sticky-nav > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sticky-nav > nav:first-child {
+  padding-left: 30px;
+}
+
+nav a {
   color: var(--white) !important;
 }
 
 nav ul{
+  display: flex;
   position: relative;
   right: 0;
-  display: flex;
   justify-content: flex-end;
   list-style-type: none;
+  margin: 5px 0;
 }
 
 nav li {
@@ -153,6 +168,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 #logo-container * {
@@ -188,21 +204,17 @@ footer {
   border-radius: 5px;
 }
 
-#portfolio-container {
-  display: flex;
-}
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 h2 {
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.box p:last-of-type {
   margin-bottom: 10px;
 }
 
@@ -213,4 +225,10 @@ p {
 a {
   color: var(--aqua);
   text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
 }
