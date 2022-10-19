@@ -11,7 +11,7 @@ Live site: [My portfolio website](https://bobwritescode.github.io/portfoli-websi
 ### Resolved
 
 #### Bug 1
-#### White space on right side of screen on mobile.
+**MOBILE: White space on right side of screen.**
 
 [971e9ad](https://github.com/BobWritesCode/portfoli-website/commit/971e9ad173ab8d6dcd9ff69726bd38992226dcd1)
 
@@ -32,6 +32,13 @@ The solution was either putting the site in a `div` wrapper and applying the bel
 }
 ```
 ---
+
+### Unresolved
+
+#### Bug 2
+**MOBILE: White space appearing at bottom of page as you scroll down**
+
+Problem seems to be caused by mobile interface continually trying to put footer too early.
 
 ## Credits
 
