@@ -85,7 +85,14 @@ td {
 
 #sticky-nav {
   display: block;
-  flex-direction: row;
+}
+
+#mobile-nav {
+  display: none;
+  height: 52px;
+}
+
+#sticky-nav, #mobile-nav {
   position: sticky;
   top: 0;
   background-color: var(--box-bg);
@@ -94,20 +101,27 @@ td {
 
 #sticky-nav > nav {
   display: flex;
+}
+
+#sticky-nav > nav, #mobile-nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-#sticky-nav > nav:first-child {
+#sticky-nav > nav:first-child, #mobile-nav > div:first-child:first-child {
   padding-left: 30px;
 }
 
-nav a {
+#mobile-nav > div:last-child {
+  padding-right: 30px;
+}
+
+nav a, #mobile-nav a{
   color: var(--white);
 }
 
-nav a:hover {
+nav a:hover, #mobile-nav a:hover {
   color: var(--aqua);
 }
 
@@ -299,8 +313,11 @@ header h1 {
   opacity: 1;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
   #sticky-nav, #left-icons {
     display: none;
+  }
+  #mobile-nav {
+    display: flex;
   }
 }
