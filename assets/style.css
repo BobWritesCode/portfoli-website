@@ -23,6 +23,7 @@
 
 body {
   background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
+  background-size: 100vw 1000vh;
   color: var(--white);
   margin: 0;
   padding: 0;
