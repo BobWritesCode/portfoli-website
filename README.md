@@ -10,6 +10,7 @@ Live site: [My portfolio website](https://bobwritescode.github.io/portfoli-websi
 
 ### Resolved
 
+#### Bug 1
 #### White space on right side of screen on mobile.
 
 [971e9ad](https://github.com/BobWritesCode/portfoli-website/commit/971e9ad173ab8d6dcd9ff69726bd38992226dcd1)
@@ -32,3 +33,6 @@ The solution was either putting the site in a `div` wrapper and applying the bel
 ```
 ---
 
+## Credits
+
+Thank you **Zack Owen** for helping solving [Bug 1](#Bug-1).
