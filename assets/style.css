@@ -45,6 +45,7 @@ body * {
 h2 {
   font-size: calc(14px + 0.8vw);
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 h3 {
@@ -220,7 +221,7 @@ footer p {
 }
 
 .section-container > div {
-  margin-top: 90px;
+  margin-top: 57px;
 }
 
 .section-width {
@@ -229,16 +230,12 @@ footer p {
   margin: 0 auto;
 }
 
-.snap {
-  scroll-snap-align: start;
-}
-
 .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 5%;
+  padding: 50px;
   background-color: var(--box-bg);
   box-shadow:
     30px 40px 20px 2px rgb(0, 0, 0);
@@ -262,6 +259,7 @@ header h1 {
   font-size: var(--heading-font-size);
   font-family: 'Source Code Pro', monospace;
   color: var(--code-blue);
+  margin-bottom: 0;
 }
 
 .header-inner-code {
