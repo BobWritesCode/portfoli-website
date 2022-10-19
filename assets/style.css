@@ -24,7 +24,7 @@
 body {
   background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
   background-repeat:repeat-y;
-  background-size: 100vw 200vh;
+  background-size: 100vw 800vh;
   color: var(--white);
   margin: 0;
   padding: 0;
