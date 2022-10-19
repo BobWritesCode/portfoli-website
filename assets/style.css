@@ -3,6 +3,7 @@
 :root {
   --body-bg: rgb(103, 0, 238);
   --box-bg: rgb(30, 30, 30);
+  --light-gray: rgb(159, 159, 159);
   --menu-bg: rgb(53, 53, 53);
   --gold: #FFD700;
   --code-blue:rgb(151, 151, 255);
@@ -75,6 +76,10 @@ hr {
 
 .gold {
   color: var(--gold) !important;
+}
+
+.light-gray {
+  color: var(--light-gray);
 }
 
 .full-width {
@@ -190,6 +195,12 @@ nav li, #mobile-dropdown li {
 footer { 
   background-color: var(--box-bg);
   padding: 0 var(--page-border);
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
 }
 
 .section-container {
