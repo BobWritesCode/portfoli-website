@@ -3,6 +3,7 @@
 :root {
   --body-bg: rgb(103, 0, 238);
   --box-bg: rgb(30, 30, 30);
+  --menu-bg: rgb(53, 53, 53);
   --gold: #FFD700;
   --code-blue:rgb(151, 151, 255);
   --code-light-blue:rgb(169, 169, 255);
@@ -93,24 +94,25 @@ td {
   height: 52px;
 }
 
-#sticky-nav, #mobile-nav, #mobile-dropdown {
+#mobile-nav > div {
+  height:100%;
+}
+
+#sticky-nav, #mobile-nav {
   position: sticky;
   top: 0;
   background-color: var(--box-bg);
-  z-index: 99;
+  z-index: 98;
 }
 
-#sticky-nav > nav {
+#sticky-nav > nav, #mobile-nav > div {
   display: flex;
-}
-
-#sticky-nav > nav, #mobile-nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-#sticky-nav > nav:first-child, #mobile-nav > div:first-child:first-child {
+#sticky-nav > nav:first-child, #mobile-nav > div:first-child {
   padding-left: 30px;
 }
 
@@ -126,7 +128,7 @@ nav a:hover, #mobile-nav a:hover, #mobile-dropdown a {
   color: var(--aqua);
 }
 
-nav ul{
+nav ul {
   display: flex;
   position: relative;
   right: 0;
@@ -167,10 +169,13 @@ nav li, #mobile-dropdown li {
 
 .open-dropdown {
   display: block !important;
+  position: fixed;
+  top: 52px;
   width: 100% !important;
-  background-color: var(--box-bg) !important;
+  background-color: var(--menu-bg) !important;
   padding-bottom: 20px;
   color: var(--white) !important;
+  z-index: 99 !important;
 }
 
 footer { 
@@ -343,6 +348,6 @@ header h1 {
     display: none;
   }
   #mobile-nav {
-    display: flex;
+    display: block;
   }
 }
