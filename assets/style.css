@@ -21,6 +21,7 @@ body {
   color: var(--white);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body * {
@@ -138,7 +139,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: calc(50vh - 90px);
+  margin-bottom: calc(20vh - 90px);
 }
 
 .section-container > div {
@@ -237,10 +238,26 @@ header h1 {
   height: 100%;
 }
 
-button {
-  background-color: var(--aqua);
-  padding: 5px 10px;
+.project-btns {
+  display: flex;
 }
+
+.project-btns div {
+  background-color: var(--background);
+  padding: 5px 10px;
+  color: var(--aqua);
+  font-size: calc(12px + 0.5vw);
+  border: 1px solid var(--aqua);
+  margin-right: 10px;
+
+}
+
+.project-btns div:hover {
+  background-color: var(--aqua);
+  color: var(--background);
+  border-color: var(--aqua);
+}
+
 
 .white-btn {
   background-color: var(--white);
@@ -265,6 +282,17 @@ button {
 
 #left-icons i:hover {
   color: var(--aqua);
+}
+
+.reveal{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 800px) {
