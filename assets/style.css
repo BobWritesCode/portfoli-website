@@ -12,6 +12,8 @@
   --blue: rgb(4, 4, 123);
   --white: rgb(241, 255, 250);
   --page-border: 20vw;
+  --heading-font-size: calc(14px + 0.8vw);
+  --standard-font-size: calc(12px + 0.5vw);
 }
 
 * {
@@ -35,19 +37,26 @@ body * {
   margin: 0;
   padding: 0;
 }
+ h1 {
+  font-size: calc(18px + 3.2vw);
+ }
 
 h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: calc(14px + 0.8vw);
+  margin-bottom: 30px;
 }
 
 h3 {
-  font-size: calc(12px + 0.5vw);
-  margin-top: 20px;
+  font-size: calc(13px + 0.7vw);
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
 }
 
 p, button {
-  font-size: calc(12px + 0.5vw);
+  font-size: var(--standard-font-size);
 }
 
 a {
@@ -82,7 +91,7 @@ td {
   font-family: 'Source Code Pro', monospace;
   padding-right: 10px;
   color: rgb(155, 155, 155);
-  font-size: calc(12px + 0.5vw);
+  font-size: var(--standard-font-size);
 }
 
 #sticky-nav {
@@ -222,16 +231,15 @@ footer {
 header h1 {
   padding-left: 3vw;
   line-height: 1;
-  font-size: calc(18px + 3.2vw);
 }
 
 .header-blurb {
-  font-size: calc(12px + 0.5vw);
+  font-size: var(--standard-font-size);
   color: var(--code-orange);
 }
 
 .heading-text {
-  font-size: calc(12px + 0.8vw);
+  font-size: var(--heading-font-size);
   font-family: 'Source Code Pro', monospace;
   color: var(--code-blue);
 }
@@ -261,7 +269,7 @@ header h1 {
 }
 
 #project-container td {
-  font-size: calc(12px + 0.5vw);
+  font-size: var(--standard-font-size);
   color: var(--code-orange);
 }
 
@@ -295,7 +303,7 @@ header h1 {
   padding: 5px 10px;
   margin-bottom: 10px;
   color: var(--aqua);
-  font-size: calc(12px + 0.5vw);
+  font-size: var(--standard-font-size);
   border: 1px solid var(--aqua);
   margin-right: 10px;
 
