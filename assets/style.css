@@ -293,6 +293,7 @@ header h1 {
 .project-btns div {
   background-color: var(--box-bg);
   padding: 5px 10px;
+  margin-bottom: 10px;
   color: var(--aqua);
   font-size: calc(12px + 0.5vw);
   border: 1px solid var(--aqua);
@@ -341,6 +342,20 @@ header h1 {
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
+}
+
+
+@media only screen and (max-width: 1080px) {
+  #project-container > div {
+    flex-direction: column;
+  }
+  #project-container > div > div {
+    width: 100%;
+  }
+  #project-container img {
+    width: 100% !important;
+  }
+
 }
 
 @media only screen and (max-width: 830px) {
