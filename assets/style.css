@@ -25,7 +25,7 @@ body {
   background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*background-color: var(--body-bg);*/
+  background-size: 100vw 200vh;
   color: var(--white);
   margin: 0;
   padding: 0;
@@ -193,7 +193,8 @@ nav li, #mobile-dropdown li {
   display: block !important;
   position: fixed;
   top: 52px;
-  width: 100% !important;
+  left:0;
+  width: 100vw;
   background-color: var(--menu-bg) !important;
   padding-bottom: 20px;
   color: var(--white) !important;
