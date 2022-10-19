@@ -268,6 +268,10 @@ header h1 {
   width: 50%;
 }
 
+#project-container > div > div > div {
+  padding-right: 15px;
+}
+
 #project-container td {
   font-size: var(--standard-font-size);
   color: var(--code-orange);
@@ -329,6 +333,7 @@ header h1 {
   position: fixed;
   bottom: 20px;
   left: 20px;
+  z-index: 97;
 }
 
 #left-icons i {
