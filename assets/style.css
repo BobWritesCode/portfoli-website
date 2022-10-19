@@ -33,6 +33,11 @@ body {
   overflow-x: hidden;
 }
 
+#site-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body * {
   font-family: 'Manrope', sans-serif;
   margin: 0;
