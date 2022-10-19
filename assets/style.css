@@ -43,6 +43,12 @@ body * {
   margin: 0;
   padding: 0;
 }
+
+#test-id {
+  color:#322975;
+  font-size: var(--standard-font-size);
+}
+
  h1 {
   font-size: calc(18px + 3.2vw);
  }
