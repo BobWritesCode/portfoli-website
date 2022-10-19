@@ -142,6 +142,10 @@ nav a:hover, #mobile-nav a:hover, #mobile-dropdown a {
   color: var(--aqua);
 }
 
+nav a:active, #mobile-nav a:active {
+  color: var(--white);
+}
+
 nav ul {
   display: flex;
   position: relative;
@@ -179,6 +183,10 @@ nav li, #mobile-dropdown li {
 
 #mobile-dropdown a:hover {
   color: var(--aqua) !important;
+}
+
+#mobile-dropdown a:active {
+  color: var(--white) !important;
 }
 
 .open-dropdown {
@@ -330,6 +338,9 @@ header h1 {
   border-color: var(--aqua);
 }
 
+.project-btns div:active {
+  color: var(--white);
+}
 
 .white-btn {
   background-color: var(--white);
@@ -355,6 +366,10 @@ header h1 {
 
 #left-icons i:hover {
   color: var(--aqua);
+}
+
+#left-icons i:active {
+  color: var(--white);
 }
 
 .reveal{
