@@ -23,8 +23,7 @@
 
 body {
   background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-repeat:repeat-y;
   background-size: 100vw 200vh;
   color: var(--white);
   margin: 0;

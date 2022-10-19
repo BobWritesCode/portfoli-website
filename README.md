@@ -39,6 +39,7 @@ The solution was either putting the site in a `div` wrapper and applying the bel
 **MOBILE: White space appearing at bottom of page as you scroll down**
 
 Problem seems to be caused by mobile interface continually trying to put footer too early.
+- Problem still present even after trying hopefully fix of removing footer [2305d2d](https://github.com/BobWritesCode/portfoli-website/commit/2305d2db687e303d1326847a09117e3837044f85).
 
 ## Credits
 
