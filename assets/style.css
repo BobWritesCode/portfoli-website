@@ -267,6 +267,10 @@ footer * {
 	margin-bottom: 10px;
 }
 
+#header {
+	margin-top: 10vh;
+}
+
 header h1 {
 	padding-left: 3vw;
 	line-height: 1;
