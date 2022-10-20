@@ -1,4 +1,5 @@
 const btnOpenDropMenu = document.getElementById("toggle-dropdown");
+const topOfPage = document.getElementById("top");
 
 /**
  * Activates the reveal effect when scrolling down web pages.
@@ -8,12 +9,15 @@ const btnOpenDropMenu = document.getElementById("toggle-dropdown");
 function reveal() {
    var reveals = document.querySelectorAll(".reveal");
 
-   for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = windowHeight * 0.80;
+   var windowHeight = window.innerHeight;
+   var elementVisible = windowHeight * 0.80;
 
-      if (elementTop < elementVisible) {
+   var siteTop = topOfPage.getBoundingClientRect().top;
+
+   for (var i = 0; i < reveals.length; i++) {
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      
+      if (elementTop < elementVisible && !(siteTop == 0))  {
          reveals[i].classList.add("active");
       } else {
          reveals[i].classList.remove("active");
