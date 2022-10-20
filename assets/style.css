@@ -230,7 +230,8 @@ footer {
 	padding: 10px 0;
 }
 
-footer p {
+footer * {
+	font-size: calc(10px + 0.3vw) !important;
 	margin: 0;
 }
 
