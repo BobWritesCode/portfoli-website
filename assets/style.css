@@ -127,7 +127,7 @@ td {
 
 #sticky-nav,
 #mobile-nav {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	background-color: var(--box-bg);
 	z-index: 98;
