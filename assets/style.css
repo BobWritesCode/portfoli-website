@@ -355,6 +355,9 @@ header h1 {
 
 #mobile-dropdown .resume-btn {
 	background-color: rgba(0, 0, 0, 0);
+	min-width: fit-content;
+	max-width: 150px;
+	width: 100%;
 }
 
 .resume-btn:hover,
@@ -461,7 +464,7 @@ header h1 {
 
 }
 
-@media only screen and (max-width: 849px) {
+@media only screen and (max-width: 860px) {
 
 	#sticky-nav,
 	#left-icons {
