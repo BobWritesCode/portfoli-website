@@ -2,7 +2,7 @@ const btnOpenDropMenu = document.getElementById("toggle-dropdown");
 const topOfPage = document.getElementById("top");
 
 /**
- * Activates the reveal effect when scrolling down web pages.
+ * Activates the reveal effect when scrolling through the page.
  * Original code before being modified for my needs: 
  * https://alvarotrigo.com/blog/css-animations-scroll/#:~:text=What%20are%20CSS%20Scroll%20Animations,text%2C%20images%2C%20and%20videos.
  */
