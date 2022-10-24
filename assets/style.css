@@ -69,6 +69,7 @@ p {
 }
 
 p,
+#certifications-container li,
 button {
 	font-size: var(--standard-font-size);
 }
