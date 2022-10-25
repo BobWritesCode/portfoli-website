@@ -15,6 +15,16 @@
     <div id="site-wrapper">
       <span id="top"></span>
 
+      <!-- Image Preview -->
+      <div id="image-preview-container">
+        <div>
+          <div>
+            <img src="">
+            <button id="btn-close-preview" onclick="closePreview()">CLOSE</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Left side icons -->
       <div id="left-icons">
         <a href="mailto:contact@warwickhart.com" target="_blank" aria-label="Create a new email to send to Warwick. (Opens in new tab).">
@@ -193,9 +203,9 @@
               </h2>
               <div id="certifications-container">
                 <ul>
-                  <li>Code Institute - <span class="orange">Full Stack Developer diploma</span> <em>(In progress)</em>.</li>
-                  <li><i class="fa-brands fa-linkedin"></i> LinkedIn Learning - <span class="orange">Git Essential Training: The Basics</span>.</li>
-                  <li>Code Institute - <span class="orange">5 day coding challenge</span>.</li>
+                  <li>Code Institute - <span class="orange">Full Stack Developer Diploma</span> <em>(In progress)</em>. </li>
+                  <li><i class="fa-brands fa-linkedin"></i> LinkedIn Learning - <span class="orange">Git Essential Training: The Basics</span>. <button class="btn-cert" onclick="openPreview('git-essential-training-the-basics.png')">[certificate]</button></li>
+                  <li>Code Institute - <span class="orange">5 Day Coding Challenge</span>. <button class="btn-cert" onclick="openPreview('five-day-coding-challenge.png')">[certificate]</button></li>
                   <li><i class="fa-brands fa-linkedin"></i> LinkedIn skill assessment - <span class="orange">HTML</span>.</li>
                   <li><i class="fa-brands fa-linkedin"></i> LinkedIn skill assessment - <span class="orange">CSS</span>.</li>
                 </ul>

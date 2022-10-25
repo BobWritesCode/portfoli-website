@@ -33,13 +33,29 @@ function closeDropMenu() {
 }
 
 function openDropMenu() {
-   var dropDown = document.getElementById("mobile-dropdown");
+   const dropDown = document.getElementById("mobile-dropdown");
    if (dropDown.classList.contains("open-dropdown")) {
       dropDown.classList.remove("open-dropdown");
    } else {
       dropDown.classList.add("open-dropdown");
    }
 }
+
+function openPreview(data) {
+   const body = document.getElementsByTagName('body');
+
+   const preview = document.getElementById('image-preview-container');
+   const img = preview.getElementsByTagName('img');
+   let pic = "./assets/imgs/certificates/" + data;
+   img[0].setAttribute('src', pic);
+   preview.style.display = "flex";
+}
+
+function closePreview() {
+   const preview = document.getElementById('image-preview-container');
+   preview.style.display = "none";
+}
+
 
 window.addEventListener("scroll", function () {
    reveal();

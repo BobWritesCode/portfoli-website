@@ -98,8 +98,72 @@ hr {
 
 .full-width {
 	width: 100%;
-
 	max-width: 100%;
+}
+
+#image-preview-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 96;
+	z-index: 99 !important;
+}
+
+#image-preview-container > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(18, 29, 29, 0.8);
+	z-index: 99 !important;
+}
+
+#image-preview-container > div > div {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	max-width: 75vw;
+	max-height: 75vh;
+	z-index: 99 !important;
+}
+
+#image-preview-container img {
+	border: var(--gold) solid 8px;
+	max-width: 75vw;
+	max-height: 75vh;
+	z-index: 99 !important;
+}
+
+#image-preview-container button {
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 3px 10px;
+	border: 2px solid var(--gold);
+	color: var(--gold);
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#image-preview-container button:hover {
+	background-color: var(--gold);
+	color: #17123d;
+}
+
+.btn-cert {
+	background-color: rgba(0, 0, 0, 0);
+	color: var(--aqua);
+	border: 1px solid var(--aqua)
+}
+.btn-cert:hover {
+	background-color: rgba(0, 0, 0, 0);
+	background-color: var(--aqua); 
+	color: var(--box-bg);
+	border: 1px solid var(--aqua)
 }
 
 td {
@@ -131,7 +195,7 @@ td {
 	position: fixed;
 	top: 0;
 	background-color: var(--box-bg);
-	z-index: 98;
+	z-index: 70;
 }
 
 #sticky-nav>nav,
@@ -222,7 +286,7 @@ nav li,
 	background-color: var(--menu-bg);
 	padding-bottom: 20px;
 	color: var(--white);
-	z-index: 99 !important;
+	z-index: 80 !important;
 }
 
 footer {
@@ -423,10 +487,11 @@ header h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	align-content: center;
 	position: fixed;
 	bottom: 20px;
 	left: 20px;
-	z-index: 97;
+	z-index: 70;
 }
 
 #left-icons i {
