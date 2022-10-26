@@ -11,6 +11,8 @@ Thank you for checking out my project in creating my portfolio website.
   - [Design Outcome](#design-outcome)
   - [Typography](#typogaphy)
   - [Features](#features)
+   - [Reveal Sections](#reveal-sections)
+   - [Image Preview](#image-preview)
   - [Bugs](#bugs)
     - [Resolved](#resolved)
     - [Unresolved](#unresolved)
@@ -57,6 +59,8 @@ I use 2 different fonts which are:
 
 ---
 ## Features
+
+### Reveal Sections
 
 As you scroll down the site there is a a nice simple animation of the modules coming in from the right side. I used [original code](https://alvarotrigo.com/blog/css-animations-scroll/#:~:text=What%20are%20CSS%20Scroll%20Animations,text%2C%20images%2C%20and%20videos) which I modified slightly to provide the functionality I was after.
 
@@ -118,6 +122,62 @@ function reveal() {
 }
 ```
 
+### Image Preview
+
+To view the certificates I added a popup style image preview. The main challenge was stopping the screen scrolling when the image appeared. 
+
+To avoid that happening I created a container that is always there but you can't see.
+
+```html 
+<!-- Image Preview -->
+<div id="image-preview-container">
+   <div>
+      <div>
+      <img src="">
+      <button id="btn-close-preview" onclick="closePreview()">CLOSE</button>
+      </div>
+   </div>
+</div>
+```
+
+```css
+#image-preview-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 96;
+	z-index: 99 !important;
+}
+
+#image-preview-container > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(18, 29, 29, 0.8);
+	z-index: 99 !important;
+}
+
+#image-preview-container > div > div {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	max-width: 75vw;
+	max-height: 75vh;
+	z-index: 99 !important;
+}
+
+#image-preview-container img {
+	border: var(--gold) solid 8px;
+	max-width: 75vw;
+	max-height: 75vh;
+	z-index: 99 !important;
+}
+```
 ---
 ## Bugs
 
