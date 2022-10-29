@@ -13,13 +13,14 @@
 	--blue: rgb(4, 4, 123);
 	--white: rgb(241, 255, 250);
 	--page-border: 20vw;
-	--heading-font-size: calc(14px + 0.8vw);
-	--standard-font-size: calc(12px + 0.5vw);
 }
+
+/* --------------------------------------------------- Base elements */
 
 * {
 	scroll-behavior: smooth;
 }
+
 
 body {
 	background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
@@ -31,50 +32,34 @@ body {
 	overflow-x: hidden;
 }
 
-#site-wrapper {
-	position: relative;
-	overflow-x: hidden;
-	width: 100%;
-	max-width: 100%;
-}
-
 body * {
 	font-family: 'Manrope', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
-#test-id {
-	color: #322975;
-	font-size: var(--standard-font-size);
-}
-
-h1 {
-	font-size: calc(18px + 3.2vw);
-}
-
 h2 {
-	font-size: calc(14px + 0.8vw);
+	font-size: 20px;
 	margin-bottom: 30px;
 	margin-top: 20px;
 }
 
 h3 {
-	font-size: calc(13px + 0.7vw);
+	font-size: 18px;
 	margin-bottom: 10px;
 }
 
 p {
+	font-size: 16px;
 	margin-bottom: 30px;
 }
 
-p,
-#certifications-container *,
 button {
-	font-size: var(--standard-font-size);
+	font-size: 16px;
 }
 
 a {
+	font-size: 16px;
 	color: var(--aqua);
 	text-decoration: none;
 }
@@ -83,6 +68,12 @@ hr {
 	margin: 10px 0;
 	border-color: rgb(112, 112, 112);
 }
+
+td {
+	vertical-align: bottom
+}
+
+/* --------------------------------------------------- Colour classes */
 
 .orange {
 	color: var(--code-orange) !important;
@@ -96,10 +87,19 @@ hr {
 	color: var(--light-gray) !important;
 }
 
+#site-wrapper {
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	max-width: 100%;
+}
+
 .full-width {
 	width: 100%;
 	max-width: 100%;
 }
+
+/* --------------------------------------------------- Image Preview */
 
 #image-preview-container {
 	display: none;
@@ -154,29 +154,85 @@ hr {
 	color: #17123d;
 }
 
-.btn-cert {
-	padding: 0 7px;
-	background-color: rgba(0, 0, 0, 0);
-	color: var(--aqua);
-	border: 1px solid var(--aqua)
-}
-.btn-cert:hover {
-	background-color: rgba(0, 0, 0, 0);
-	background-color: var(--aqua); 
-	color: var(--box-bg);
-	border: 1px solid var(--aqua)
+/* --------------------------------------------------- Section styling */
+
+.section-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: calc(20vh - 90px);
 }
 
-td {
-	vertical-align: bottom
+.section-container>div {
+	margin-top: 57px;
+}
+
+.section-width {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 50px;
+	background-color: var(--box-bg);
+	box-shadow:
+		30px 40px 20px 2px rgba(0, 0, 0, 0.6);
+}
+
+.box p:last-of-type {
+	margin-bottom: 10px;
 }
 
 .col1 {
 	font-family: 'Source Code Pro', monospace;
 	padding-right: 10px;
 	color: rgb(155, 155, 155);
-	font-size: var(--standard-font-size);
 }
+
+
+/* --------------------------------------------------- Header box */
+
+#header h1 {
+	font-size: 50px;
+}
+
+#header {
+	margin-top: 10vh;
+}
+
+header h1 {
+	margin-top: 20px;
+	padding-left: 3vw;
+	line-height: 1;
+}
+
+.header-blurb {
+	color: var(--code-orange);
+	font-size: 20px;
+}
+
+.heading-text {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 30px;
+	color: var(--code-blue);
+	margin-bottom: 0;
+}
+
+.header-inner-code {
+	font-family: 'Source Code Pro', monospace;
+	color: var(--code-light-blue);
+}
+
+#header-list {
+	font-size: 24px;
+}
+
+/* --------------------------------------------------- Navigation */
 
 #sticky-nav {
 	display: block;
@@ -199,20 +255,20 @@ td {
 	z-index: 70;
 }
 
-#sticky-nav>nav,
-#mobile-nav>div {
+#sticky-nav > nav,
+#mobile-nav > div {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#sticky-nav>nav:first-child,
-#mobile-nav>div:first-child {
+#sticky-nav > nav:first-child,
+#mobile-nav > div:first-child {
 	padding-left: 30px;
 }
 
-#mobile-nav>div:last-child {
+#mobile-nav > div:last-child {
 	padding-right: 30px;
 }
 
@@ -290,80 +346,7 @@ nav li,
 	z-index: 80 !important;
 }
 
-footer {
-	background-color: var(--box-bg);
-	padding: 0 var(--page-border);
-	text-align: center;
-	padding: 10px 0;
-}
-
-footer * {
-	font-size: calc(10px + 0.3vw) !important;
-	margin: 0;
-}
-
-.section-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-bottom: calc(20vh - 90px);
-}
-
-.section-container>div {
-	margin-top: 57px;
-}
-
-.section-width {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-.box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	padding: 50px;
-	background-color: var(--box-bg);
-	box-shadow:
-		30px 40px 20px 2px rgba(0, 0, 0, 0.6);
-}
-
-.box p:last-of-type {
-	margin-bottom: 10px;
-}
-
-#header {
-	margin-top: 10vh;
-}
-
-header h1 {
-	padding-left: 3vw;
-	line-height: 1;
-}
-
-.header-blurb {
-	font-size: var(--standard-font-size);
-	color: var(--code-orange);
-}
-
-.heading-text {
-	font-size: var(--heading-font-size);
-	font-family: 'Source Code Pro', monospace;
-	color: var(--code-blue);
-	margin-bottom: 0;
-}
-
-.header-inner-code {
-	font-size: calc(10px + 0.6vw);
-	font-family: 'Source Code Pro', monospace;
-	color: var(--code-light-blue);
-}
-
-#header-list {
-	font-size: calc(12px + 1vw);
-}
+/* --------------------------------------------------- Certification section */
 
 #certifications-container table {
 	border-collapse:separate; 
@@ -379,26 +362,41 @@ header h1 {
 	vertical-align: top;
 }
 
+.btn-cert {
+	padding: 0 7px;
+	background-color: rgba(0, 0, 0, 0);
+	color: var(--aqua);
+	border: 1px solid var(--aqua)
+}
+
+.btn-cert:hover {
+	background-color: rgba(0, 0, 0, 0);
+	background-color: var(--aqua); 
+	color: var(--box-bg);
+	border: 1px solid var(--aqua)
+}
+
+/* --------------------------------------------------- Project section */
+
 #project-container {
 	display: flex;
 	flex-direction: column;
 }
 
-#project-container>div {
+#project-container > div {
 	display: flex;
 	flex-direction: row;
 }
 
-#project-container>div>div {
+#project-container > div > div {
 	width: 50%;
 }
 
-#project-container>div>div>div {
+#project-container > div > div > div {
 	padding-right: 15px;
 }
 
 #project-container td {
-	font-size: var(--standard-font-size);
 	color: var(--code-orange);
 }
 
@@ -422,6 +420,40 @@ header h1 {
 	height: 100%;
 }
 
+/* --------------------------------------------------- Project section buttons */
+
+.project-btns {
+	display: flex;
+}
+
+.project-btns div {
+	background-color: var(--box-bg);
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	color: var(--aqua);
+	border: 1px solid var(--aqua);
+	margin-right: 10px;
+}
+
+.project-btns div:hover {
+	background-color: var(--aqua);
+	color: var(--box-bg);
+	border-color: var(--aqua);
+}
+
+.project-btns div:active {
+	color: var(--white);
+}
+
+/* --------------------------------------------------- Resume button */
+
+#mobile-dropdown .resume-btn {
+	background-color: rgba(0, 0, 0, 0);
+	min-width: fit-content;
+	max-width: 150px;
+	width: 100%;
+}
+
 .resume-btn {
 	align-self: center;
 	padding: 3px 10px;
@@ -432,13 +464,6 @@ header h1 {
 .resume-btn a,
 #mobile-dropdown .resume-btn a {
 	color: var(--aqua);
-}
-
-#mobile-dropdown .resume-btn {
-	background-color: rgba(0, 0, 0, 0);
-	min-width: fit-content;
-	max-width: 150px;
-	width: 100%;
 }
 
 .resume-btn:hover,
@@ -462,36 +487,7 @@ header h1 {
 	color: var(--aqua) !important;
 }
 
-
-.project-btns {
-	display: flex;
-}
-
-.project-btns div {
-	background-color: var(--box-bg);
-	padding: 5px 10px;
-	margin-bottom: 10px;
-	color: var(--aqua);
-	font-size: var(--standard-font-size);
-	border: 1px solid var(--aqua);
-	margin-right: 10px;
-}
-
-.project-btns div:hover {
-	background-color: var(--aqua);
-	color: var(--box-bg);
-	border-color: var(--aqua);
-}
-
-.project-btns div:active {
-	color: var(--white);
-}
-
-.white-btn {
-	background-color: var(--white);
-	color: var(--blue);
-	border-radius: 5px;
-}
+/* --------------------------------------------------- Left side Icons */
 
 #left-icons {
 	display: flex;
@@ -505,8 +501,8 @@ header h1 {
 }
 
 #left-icons i {
+	font-size: 20px;
 	color: var(--white);
-	font-size: calc(8px + 0.9vw);
 	padding: 5px 0;
 }
 
@@ -517,6 +513,8 @@ header h1 {
 #left-icons i:active {
 	color: var(--white);
 }
+
+/* --------------------------------------------------- Reveal animation */
 
 .reveal {
 	position: relative;
@@ -530,6 +528,20 @@ header h1 {
 	opacity: 1;
 }
 
+/* --------------------------------------------------- Footer */
+
+footer {
+	background-color: var(--box-bg);
+	padding: 0 var(--page-border);
+	text-align: center;
+	padding: 10px 0;
+}
+
+footer * {
+	margin: 0;
+}
+
+/* --------------------------------------------------- Media Queries */
 
 @media only screen and (max-width: 1080px) {
 	#project-container>div {
@@ -588,4 +600,52 @@ header h1 {
 
 	}
 
+	@media only screen and (max-width: 600px) {
+
+		#header h1 {
+			font-size: 40px;
+		}
+
+		.header-blurb {
+			font-size: 20px;
+		}
+
+		.heading-text {
+			font-size: 24px;
+		}
+
+		#header-list {
+			font-size: 20px;
+		}
+
+		.box {
+			padding: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 450px) {
+
+		#header h1 {
+			font-size: 30px;
+		}
+
+		.header-blurb {
+			font-size: 16px;
+		}
+
+		.heading-text {
+			font-size: 18px;
+		}
+
+		#header-list {
+			font-size: 16px;
+		}
+	}
+
+	@media only screen and (max-width: 350px) {
+
+		.heading-text {
+			font-size: 16px;
+		}
+	}
 }
