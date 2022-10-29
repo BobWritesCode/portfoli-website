@@ -354,12 +354,12 @@ nav li,
 
 }
 
-#certifications-container tr {
-	border-bottom: 1px solid rgba(112, 112, 112, 1);
-}
-
 #certifications-container td {
 	vertical-align: top;
+}
+
+#certifications-container tr {
+	margin-bottom: 10px;
 }
 
 .btn-cert {
