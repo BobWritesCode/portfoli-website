@@ -2,17 +2,27 @@ $(function() {
   console.log( "ready!" );
 }); 
 
+// ------------------------------------- EVENT LISTENERS //
+
 $("#toggle-dropdown").click(openDropMenu);
 
-const topOfPage = document.getElementById("top");
+$(window).scroll(function () {
+  reveal();
+  closeDropMenu();
+});
+
+// ------------------------------------- GLOBAL VARIABLES //
+
+
+// ------------------------------------- FUNCTIONS //
 
 /**
  * Activates the reveal effect when scrolling through the page.
  */
 function reveal() {
-  let elementVisible = window.innerHeight * 0.80;
-  let siteTop = topOfPage.getBoundingClientRect().top;
-
+  const elementVisible = window.innerHeight * 0.80;
+  const topOfPage = document.getElementById("top");
+  const siteTop = topOfPage.getBoundingClientRect().top;
   $.each( $(".reveal"), function( index, value ){
     (value.getBoundingClientRect().top < elementVisible && siteTop != 0)
       ? value.classList.add("active") 
@@ -54,12 +64,3 @@ function openPreview(data) {
 function closePreview() {
   $('#image-preview-container').css("display", "none");
 }
-
-/**
- * When user scrolls through page.
- */
-$(window).scroll(function () {
-  reveal();
-  closeDropMenu();
-});
-
