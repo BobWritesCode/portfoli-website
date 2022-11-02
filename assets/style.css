@@ -268,10 +268,6 @@ header h1 {
 	padding-left: 30px;
 }
 
-#mobile-nav > div:last-child {
-	padding-right: 30px;
-}
-
 nav a,
 #mobile-nav a,
 #mobile-dropdown a {
@@ -344,6 +340,15 @@ nav li,
 	padding-bottom: 20px;
 	color: var(--white);
 	z-index: 80 !important;
+}
+
+#toggle-dropdown {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: row-reverse;
+    align-items: center;
+	padding-right: 30px;
 }
 
 /* --------------------------------------------------- Tech section */
