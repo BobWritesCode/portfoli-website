@@ -78,17 +78,17 @@ function progressBars() {
   
   this.toogleBars = function (data) {
     if (bool && data == "open") {
+      bool = false;
       $(".animated-progress span").each(function () {
         $(this).animate({width: $(this).attr("data-progress") + "%",}, 4000);
         $(this).text($(this).attr("data-text")).css("text-align", "left");
       })
-      bool = false;
-    } else if (bool == false && data == "close") {
+    } else if (!bool && data == "close") {
+      bool = true;
       $(".animated-progress span").each(function () {
         $(this).animate({width: "0%",}, 1000);
         $(this).text($(this).attr("data-text")).css("text-align", "left");
       })
-      bool = true;
     }
   }
 }
