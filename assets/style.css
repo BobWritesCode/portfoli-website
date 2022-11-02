@@ -243,7 +243,7 @@ header h1 {
 	height: 52px;
 }
 
-#mobile-nav>div {
+#mobile-nav > div {
 	height: 100%;
 }
 
@@ -261,11 +261,6 @@ header h1 {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-}
-
-#sticky-nav > nav:first-child,
-#mobile-nav > div:first-child {
-	padding-left: 30px;
 }
 
 nav a,
@@ -299,6 +294,15 @@ nav li,
 #mobile-dropdown li {
 	margin: 0 20px;
 	padding: 10px;
+}
+
+.logo {
+	display: flex;
+	width: 236px;
+	flex-direction: row;
+    align-content: center;
+	padding-left: 30px;
+	white-space: nowrap;
 }
 
 .nav-title {
