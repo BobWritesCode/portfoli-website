@@ -352,7 +352,7 @@ nav li,
 	width: 90%;
 	height: 30px;
 	border-radius: 10px;
-	margin: 20px 10px;
+	margin: 20px 20px 10px 0px;
 	overflow: hidden;
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.05);;
@@ -401,6 +401,10 @@ nav li,
 
   .progress-lua span {
 	background-color: #040483;
+  }
+
+  .progress-vba span {
+	background-color: #247344;
   }
 
 /* --------------------------------------------------- Certification section */
