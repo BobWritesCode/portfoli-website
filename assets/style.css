@@ -367,7 +367,6 @@ nav li,
 	color: rgb(255, 255, 255);
 	line-height: 30px;
 	position: absolute;
-	text-align: end;
 	padding-right: 5px;
 	padding-left: 10px;
 	font-weight: 600;
@@ -405,6 +404,11 @@ nav li,
 
   .progress-vba span {
 	background-color: #247344;
+  }
+
+  .progress-mysql span {
+	background-color: #2596be;
+	color: rgb(22, 22, 22);
   }
 
 /* --------------------------------------------------- Certification section */
