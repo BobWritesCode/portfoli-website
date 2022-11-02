@@ -474,6 +474,12 @@ nav li,
 	color: var(--code-orange);
 }
 
+#project-container tr {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap; 
+}
+
 #project-container td:first-of-type {
 	padding-left: 0;
 }
