@@ -1,5 +1,6 @@
 $(function() {
   console.log( "ready!" );
+  progressBars()
 }); 
 
 // ------------------------------------- EVENT LISTENERS //
@@ -24,9 +25,14 @@ function reveal() {
   const topOfPage = document.getElementById("top");
   const siteTop = topOfPage.getBoundingClientRect().top;
   $.each( $(".reveal"), function( index, value ){
-    (value.getBoundingClientRect().top < elementVisible && siteTop != 0)
-      ? value.classList.add("active") 
-      : value.classList.remove("active");
+    if (value.getBoundingClientRect().top < elementVisible && siteTop != 0) {
+      value.classList.add("active") 
+      if (index=="1") {toogleBars("open")}
+
+    } else {
+      value.classList.remove("active");
+      if (index=="1") {toogleBars("close")}
+    }
   })
 }
 
@@ -64,3 +70,26 @@ function openPreview(data) {
 function closePreview() {
   $('#image-preview-container').css("display", "none");
 }
+
+// ------------------------------------- Progress bars //
+
+function progressBars() {
+  let bool = true;
+  
+  this.toogleBars = function (data) {
+    if (bool && data == "open") {
+      $(".animated-progress span").each(function () {
+        $(this).animate({width: $(this).attr("data-progress") + "%",}, 4000);
+        $(this).text($(this).attr("data-text")).css("text-align", "left");
+      })
+      bool = false;
+    } else if (bool == false && data == "close") {
+      $(".animated-progress span").each(function () {
+        $(this).animate({width: "0%",}, 1000);
+        $(this).text($(this).attr("data-text")).css("text-align", "left");
+      })
+      bool = true;
+    }
+  }
+}
+
