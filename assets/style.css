@@ -169,7 +169,7 @@ td {
 
 .section-width {
 	width: 90%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -358,7 +358,6 @@ nav li,
 /* --------------------------------------------------- Tech section */
 
 .animated-progress {
-	width: 90%;
 	height: 30px;
 	border-radius: 10px;
 	margin: 20px 20px 10px 0px;
@@ -407,6 +406,11 @@ nav li,
 	color: rgb(22, 22, 22);
   }
 
+  .progress-flask span {
+	background-color: rgb(251, 251, 251);
+	color: rgb(0, 0, 0);
+  }
+
   .progress-lua span {
 	background-color: #040483;
   }
@@ -426,6 +430,10 @@ nav li,
 	border-collapse:separate; 
 	border-spacing: 10px 10px;
 
+}
+
+#certifications-container > table {
+	width: 100%;
 }
 
 #certifications-container td {
