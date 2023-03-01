@@ -37,6 +37,14 @@ hr {
 	border-color: rgb(112, 112, 112);
 }
 
+a {
+	color: var(--aqua);
+}
+
+nav {
+	border-bottom: 1px solid var(--code-orange);
+}
+
 /* --------------------------------------------------- Colour classes */
 
 .orange {
@@ -54,112 +62,47 @@ hr {
 /* --------------------------------------------------- Image Preview */
 
 #image-preview-container {
-	display: none;
-	position: fixed;
+	position: fixed !important;
 	top: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 96;
-	z-index: 99 !important;
-}
-
-#image-preview-container > div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(18, 29, 29, 0.8);
-	z-index: 99 !important;
-}
-
-#image-preview-container > div > div {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	max-width: 75vw;
-	max-height: 75vh;
-	z-index: 99 !important;
+	z-index:5000 !important;
 }
 
 #image-preview-container img {
-	border: var(--gold) solid 8px;
+	border: var(--code-orange) solid 8px;
 	max-width: 75vw;
 	max-height: 75vh;
-	z-index: 99 !important;
 }
 
 #image-preview-container button {
-	width: fit-content;
-	margin: 0 auto;
-	margin-top: 10px;
-	padding: 3px 10px;
-	border: 2px solid var(--gold);
-	color: var(--gold);
-	border-radius: 5px;
+
+	border-color : var(--code-orange) !important;
+	color: var(--code-orange) !important;
 	background-color: rgba(0, 0, 0, 0);
 }
 
 #image-preview-container button:hover {
-	background-color: var(--gold);
-	color: #17123d;
+	background-color: var(--code-orange) !important;
+	color: #000000 !important;
 }
 
 /* --------------------------------------------------- Section styling */
 
-.section-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-bottom: calc(20vh - 90px);
-}
-
-.section-container>div {
-	margin-top: 57px;
-}
 
 .box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	padding: 30px 40px;
 	background-color: var(--box-bg);
 	box-shadow:
 		30px 40px 20px 2px rgba(0, 0, 0, 0.6);
 }
 
-.box p:last-of-type {
-	margin-bottom: 10px;
-}
-
-.col1 {
-	font-family: 'Source Code Pro', monospace;
-	padding-right: 10px;
-	/* color: rgb(155, 155, 155); */
-}
-
-
 /* --------------------------------------------------- Header box */
 
-#header {
-	margin-top: 10vh;
-}
-
-header h1 {
-	margin-top: 20px;
-	line-height: 1;
-}
 
 .header-blurb {
 	color: var(--code-orange);
-	font-size: 20px;
 }
 
 .heading-text {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 30px;
 	color: var(--code-blue);
 }
 
@@ -168,16 +111,11 @@ header h1 {
 	color: var(--code-light-blue);
 }
 
-#header-list {
-	font-size: 24px;
-}
-
 .logo {
 	display: flex;
 	width: 236px;
 	flex-direction: row;
     align-content: center;
-	padding-left: 30px;
 	white-space: nowrap;
 }
 
@@ -190,10 +128,9 @@ header h1 {
 	overflow: hidden;
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.05);;
+}
 
-  }
-
-  .animated-progress span {
+.animated-progress span {
 	height: 100%;
 	display: block;
 	border-radius: 10px;
@@ -205,50 +142,55 @@ header h1 {
 	padding-left: 10px;
 	font-weight: 600;
 
-  }
+}
 
-  .progress-orange span {
+.progress-orange span {
 	background-color: rgb(232,83,37);
 
-  }
-  .progress-blue span {
+}
+.progress-blue span {
 	background-color: rgb(35,75,228);
 
-  }
-  .progress-purple span {
+}
+.progress-purple span {
 	background-color: rgb(125,19,248);
-  }
-  .progress-yellow span {
+}
+.progress-yellow span {
 	background-color: rgb(244,220,28);
 	color: rgb(22, 22, 22);
-  }
+}
 
-  .progress-jquery span {
+.progress-jquery span {
 	background-color: rgb(11,107,172);
-  }
+}
 
-  .progress-python span {
+.progress-django span {
+	background-color: #0C3C26;
+}
+
+
+.progress-python span {
 	background-color: rgb(251, 223, 89);
 	color: rgb(22, 22, 22);
-  }
+}
 
-  .progress-flask span {
+.progress-flask span {
 	background-color: rgb(251, 251, 251);
 	color: rgb(0, 0, 0);
-  }
+}
 
-  .progress-lua span {
+.progress-lua span {
 	background-color: #040483;
-  }
+}
 
-  .progress-vba span {
+.progress-vba span {
 	background-color: #247344;
-  }
+}
 
-  .progress-mysql span {
+.progress-mysql span {
 	background-color: #2596be;
 	color: rgb(22, 22, 22);
-  }
+}
 
 /* --------------------------------------------------- Certification section */
 
@@ -258,87 +200,40 @@ table td {
 
 /* --------------------------------------------------- Project section */
 
-#project-container {
-	display: flex;
-	flex-direction: column;
-}
-
-#project-container > div {
-	display: flex;
-	flex-direction: row;
-}
-
-#project-container > div > div {
-	width: 50%;
-}
-
-#project-container > div > div > div {
-	padding-right: 15px;
-}
-
 #project-container td {
 	color: var(--code-orange);
 }
 
-#project-container tr {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-#project-container td:first-of-type {
-	padding-left: 0;
-}
-
-#project-container td:last-of-type {
-	padding-right: 0;
-}
-
 #project-container td:nth-child(even) {
 	color: white;
-	padding: 0 5px;
-}
-
-.flex-col-apart {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	height: 100%;
 }
 
 /* --------------------------------------------------- Project section buttons */
 
-.project-btns {
-	display: flex;
-}
-
-.project-btns a {
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-
-.project-btns div {
-	background-color: var(--box-bg);
-	color: var(--aqua);
-	border: 1px solid var(--aqua);
+.btn-portfolio {
+	text-decoration: none;
+	background-color: var(--box-bg) !important;
+	color: var(--code-orange) !important;
+	border: 1px solid var(--code-orange);
+	border-radius: 4px;
 	padding: 5px 10px;
+	margin-right: 5px;
 }
 
-.project-btns div:hover {
-	background-color: var(--aqua);
-	color: var(--box-bg);
-	border-color: var(--aqua);
+.btn-portfolio:hover {
+	background-color: var(--code-orange) !important;
+	color: var(--box-bg) !important;
+	border-color: var(--code-orange) !important;
 }
 
-.project-btns div:active {
-	color: var(--white);
+.btn-portfolio:active {
+	color: var(--white) !important;
 }
 
 /* --------------------------------------------------- Left side Icons */
 
 
 #left-icons i {
-	font-size: 20px;
 	color: var(--white);
 	padding: 5px 0;
 }

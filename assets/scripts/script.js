@@ -4,9 +4,7 @@ $(function () {
 
 $(window).scroll(function () {
   reveal();
-  closeDropMenu();
 });
-
 
 /**
  * Activates the reveal effect when scrolling through the page.
@@ -16,15 +14,24 @@ function reveal() {
   const topOfPage = document.getElementById('top');
   const siteTop = topOfPage.getBoundingClientRect().top;
   $.each($('.reveal'), function (index, value) {
-    if (value.getBoundingClientRect().top < elementVisible && siteTop != 0) {
+    if (siteTop > 10) {
+      console.log('at top');
+      value.classList.remove('active');
+      if (index == '1') {
+        toggleBars('close');
+      }
+    } else if (
+      value.getBoundingClientRect().top < elementVisible &&
+      siteTop != 0
+    ) {
       value.classList.add('active');
       if (index == '1') {
-        toogleBars('open');
+        toggleBars('open');
       }
     } else {
       value.classList.remove('active');
       if (index == '1') {
-        toogleBars('close');
+        toggleBars('close');
       }
     }
   });
@@ -34,7 +41,7 @@ function reveal() {
  * Open image preview in center of viewpoint.
  */
 function openPreview(data) {
-  $('#image-preview-container').css('display', 'flex');
+  $('#image-preview-container').removeClass('d-none').addClass('d-flex');
   let pic = './assets/imgs/certificates/' + data;
   const img = $('#image-preview-container').find('img');
   img[0].setAttribute('src', pic);
@@ -44,13 +51,13 @@ function openPreview(data) {
  * Close image preview in center of viewpoint
  */
 function closePreview() {
-  $('#image-preview-container').css('display', 'none');
+  $('#image-preview-container').removeClass('d-flex').addClass('d-none');
 }
 
 function progressBars() {
   let bool = true;
 
-  this.toogleBars = function (data) {
+  this.toggleBars = function (data) {
     if (bool && data == 'open') {
       bool = false;
       $('.animated-progress span').each(function () {
