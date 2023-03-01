@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
+    - export DEPLOYPATH=/home/warwickh/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp assets/scripts/style.css $DEPLOYPATH
     - /bin/cp assets/scripts/jquery.css $DEPLOYPATH
