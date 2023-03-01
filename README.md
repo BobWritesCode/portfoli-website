@@ -2,41 +2,50 @@
 
 Thank you for checking out my project in creating my portfolio website.
 
-
 ## Contents
-  - [Live Site](#live-site)
-  - [Repository](#repository)
-  - [Overall Objective](#overall-objective)
-  - [Design Objectives](#design-objectives)
-  - [Design Outcome](#design-outcome)
-  - [Typography](#typogaphy)
-  - [Features](#features)
-    - [Reveal Sections](#reveal-sections)
-    - [Image Preview](#image-preview)
-  - [Bugs](#bugs)
-    - [Resolved](#resolved)
-    - [Unresolved](#unresolved)
-  - [Credit](#credits)
+
+- [Live Site](#live-site)
+- [Repository](#repository)
+- [Overall Objective](#overall-objective)
+- [Design Objectives](#design-objectives)
+- [Design Outcome](#design-outcome)
+- [Technologies](#technologies)
+- [Typography](#typography)
+- [Features](#features)
+  - [Reveal Sections](#reveal-sections)
+  - [Image Preview](#image-preview)
+- [Bugs](#bugs)
+  - [Resolved](#resolved)
+  - [Unresolved](#unresolved)
+- [Credit](#credits)
+
 ---
+
 ## Live Site
+
 Live site: [My portfolio website](https://bobwritescode.github.io/portfoli-website/).
 
 ---
+
 ## Repository
+
 Repository: [GitHub](https://github.com/BobWritesCode/portfoli-website).
 
 ---
+
 ## Overall Objective
 
 To create a portfolio website I could use to showcase my projects and provide relevant information about me as a developer in one place.
 
 ---
+
 ## Design Objectives
 
 The site must:
- - Be easy to navigate for all users.
- - Have clear defined sections.
- - Be obvious what / who the site is about immediately.
+
+- Be easy to navigate for all users.
+- Have clear defined sections.
+- Be obvious what / who the site is about immediately.
 
 ---
 
@@ -44,20 +53,36 @@ The site must:
 
 After a few different ideas. I landed on a code editor theme. Inspired by Visual Studios.
 
-![Design](./assets/imgs/readme-design.png)
+![Design](./assets/imgs/readme-design.webp)
 
 I created modules so each section would be in its own code block theme.
 
-![Design2](./assets/imgs/readme-design2.png)
+![Design2](./assets/imgs/readme-design2.webp)
 
 ---
+
+
+## Technologies
+
+This site is built using:
+
+- HTML 5
+- CSS 3
+- JavaScript
+- JQuery v3.6.1
+- BootStrap v5.0.2
+
+---
+
 ## Typography
 
 I use 2 different fonts which are:
+
 - For the main font I user [Manrope from Google Fonts](https://fonts.google.com/specimen/Manrope).
 - For the coding style front I use [Source Code Pro from Google Fonts](https://fonts.google.com/specimen/Source+Code+Pro).
 
 ---
+
 ## Features
 
 ### Reveal Sections
@@ -88,102 +113,103 @@ window.addEventListener("scroll", function () {
  * Activates the reveal effect when scrolling through the page.
  */
 function reveal() {
-   var reveals = document.querySelectorAll(".reveal");
-
-   var windowHeight = window.innerHeight;
-   var elementVisible = windowHeight * 0.80;
-
-   var siteTop = topOfPage.getBoundingClientRect().top;
-
-   for (var i = 0; i < reveals.length; i++) {
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      
-      if (elementTop < elementVisible && !(siteTop == 0))  {
-         reveals[i].classList.add("active");
-      } else {
-         reveals[i].classList.remove("active");
+  // Section needs to pass the 20% mark from the bottom of the window to show.
+  const elementVisible = window.innerHeight * 0.8;
+  // Get top of page element.
+  const topOfPage = document.getElementById('top');
+  // Get top of site.
+  const siteTop = topOfPage.getBoundingClientRect().top;
+  $.each($('.reveal'), function (index, value) {
+    if (siteTop > 10) {
+      // If at top of page hide all but top section
+      value.classList.remove('active');
+      if (index == '1') {
+        toggleBars('close');
       }
-   }
+    } else if (
+      value.getBoundingClientRect().top < elementVisible &&
+      siteTop != 0
+    ) {
+      value.classList.add('active');
+      if (index == '1') {
+        toggleBars('open');
+      }
+    } else {
+      value.classList.remove('active');
+      if (index == '1') {
+        toggleBars('close');
+      }
+    }
+  });
 }
 ```
 
 ```css
 /* Reveal module from right to left */
 .reveal {
-	position: relative;
-	transform: translateX(150px);
-	opacity: 0;
-	transition: 2s all ease;
+ position: relative;
+ transform: translateX(150px);
+ opacity: 0;
+ transition: 2s all ease;
 }
 
 .reveal.active {
-	transform: translateY(0);
-	opacity: 1;
+ transform: translateY(0);
+ opacity: 1;
 }
 ```
 
 ### Image Preview
 
-To view the certificates I added a popup style image preview. The main challenge was stopping the screen scrolling when the image appeared. 
+To view the certificates I added a popup style image preview. The main challenge was stopping the screen scrolling when the image appeared.
 
 To avoid that happening I created a container that is always there but you can't see.
 
-```html 
+```html
 <!-- Image Preview -->
-<div id="image-preview-container">
-   <div>
-      <div>
-      <img src="">
-      <button id="btn-close-preview" onclick="closePreview()">CLOSE</button>
-      </div>
-   </div>
+<div id="image-preview-container"
+  class="col-12 d-none bg-dark h-100 p-0 align-items-center justify-content-center">
+  <div class="d-flex col-10 h-100 justify-content-center align-items-center flex-column">
+    <img src="" alt="Certificate" class="">
+    <button class="btn-portfolio mt-3 w-50" onclick="closePreview()">CLOSE</button>
+  </div>
 </div>
 ```
 
 ```css
 #image-preview-container {
-	display: none;
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 96;
-	z-index: 99 !important;
-}
-
-#image-preview-container > div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(18, 29, 29, 0.8);
-	z-index: 99 !important;
-}
-
-#image-preview-container > div > div {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	max-width: 75vw;
-	max-height: 75vh;
-	z-index: 99 !important;
+ position: fixed !important;
+ top: 0;
+ z-index:5000 !important;
 }
 
 #image-preview-container img {
-	border: var(--gold) solid 8px;
-	max-width: 75vw;
-	max-height: 75vh;
-	z-index: 99 !important;
+ border: var(--code-orange) solid 8px;
+ max-width: 75vw;
+ max-height: 75vh;
+}
+
+#image-preview-container button {
+  border-color : var(--code-orange) !important;
+ color: var(--code-orange) !important;
+ background-color: rgba(0, 0, 0, 0);
+}
+
+#image-preview-container button:hover {
+ background-color: var(--code-orange) !important;
+ color: #000000 !important;
 }
 ```
+
 ---
+
 ## Bugs
 
 ### Resolved
 
-#### Bug 1 - **MOBILE: White space on right side of screen.**
+#### Bug 1
+
+**MOBILE: White space on right side of screen.**
 
 [971e9ad](https://github.com/BobWritesCode/portfoli-website/commit/971e9ad173ab8d6dcd9ff69726bd38992226dcd1)
 
@@ -204,7 +230,9 @@ To avoid that happening I created a container that is always there but you can't
 }
 ```
 
-#### Bug 2 - **MOBILE: White space appearing at bottom of page as you scroll down**
+#### Bug 2
+
+**MOBILE: White space appearing at bottom of page as you scroll down**
 
 **Problem**: White space seems to be caused by mobile interface continually trying to put footer too early.
 
@@ -215,7 +243,8 @@ To avoid that happening I created a container that is always there but you can't
 There are currently no unresolved bugs I am aware of.
 
 ---
+
 ## Credits
 
-- Thank you **Zack Owen** for helping to solve [Bug 1](#Bug-1).
+- Thank you **Zack Owen** for helping to solve [Bug 1](#bug-1).
 - [Original code](https://alvarotrigo.com/blog/css-animations-scroll/#:~:text=What%20are%20CSS%20Scroll%20Animations,text%2C%20images%2C%20and%20videos) for reveal animation before modifications I made.
