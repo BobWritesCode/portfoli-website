@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/warwickh/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp assets/style.css $DEPLOYPATH/assets
     - /bin/cp assets/scripts/jquery.js $DEPLOYPATH/assets/scripts
     - /bin/cp assets/scripts/script.js $DEPLOYPATH/assets/scripts
