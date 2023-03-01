@@ -10,12 +10,15 @@ $(window).scroll(function () {
  * Activates the reveal effect when scrolling through the page.
  */
 function reveal() {
+  // Section needs to pass the 20% mark from the bottom of the window to show.
   const elementVisible = window.innerHeight * 0.8;
+  // Get top of page element.
   const topOfPage = document.getElementById('top');
+  // Get top of site.
   const siteTop = topOfPage.getBoundingClientRect().top;
   $.each($('.reveal'), function (index, value) {
     if (siteTop > 10) {
-      console.log('at top');
+      // If at top of page hide all but top section
       value.classList.remove('active');
       if (index == '1') {
         toggleBars('close');
