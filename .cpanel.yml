@@ -7,4 +7,4 @@ deployment:
     - /bin/cp assets/style.css $DEPLOYPATH/assets
     - /bin/cp assets/scripts/jquery.js $DEPLOYPATH/assets/scripts
     - /bin/cp assets/scripts/script.js $DEPLOYPATH/assets/scripts
-    - /bin/cp assets/imgs $DEPLOYPATH/assets/imgs
+    - /bin/cp -R assets/imgs $DEPLOYPATH/assets/imgs
