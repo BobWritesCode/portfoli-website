@@ -37,12 +37,17 @@ function reveal() {
         toggleBars('close');
       }
     };
-    if (siteTop != 0) {
-      $('.flash').addClass('d-none')
-    }else {
-      $('.flash').removeClass('d-none')
-    };
   });
+  if (siteTop == 0) {
+    $('#scroll_flash').find('h3').delay( 2000 ).fadeIn("slow", function() {
+      $('#scroll_flash').removeClass('d-none')
+    });
+
+    }else {
+    $('#scroll_flash').find('h3').fadeOut("slow", function() {
+      // $('#scroll_flash').addClass('d-none')
+  });
+  };
 }
 
 /**

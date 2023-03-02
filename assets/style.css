@@ -90,7 +90,7 @@ nav {
 
 /* --------------------------------------------------- Scroll text */
 
-.flash {
+#scroll_flash {
 	-webkit-animation: flash linear 1s infinite;
 	animation: flash linear 3s infinite;
 }
