@@ -140,6 +140,10 @@ nav {
 /* --------------------------------------------------- Section styling */
 
 
+.section {
+	max-width: 1000px;
+}
+
 .box {
 	background-color: var(--box-bg);
 	box-shadow:
@@ -193,7 +197,6 @@ nav {
 	padding-right: 5px;
 	padding-left: 10px;
 	font-weight: 600;
-
 }
 
 .progress-orange span {
