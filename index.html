@@ -18,7 +18,9 @@
 </head>
 
 <body class="text-light position-relative">
+  <span id="top"></span>
 
+  <!-- Nav START -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand ms-2" href="#">
@@ -53,12 +55,12 @@
       </div>
     </div>
   </nav>
+  <!-- Nav END -->
 
   <div class="container-fluid no-gutters justify-content-center p-0 text-light" style="overflow-x: hidden;">
     <div class="row justify-content-center position-relative">
 
-
-      <!-- Image Preview -->
+      <!-- Image Preview START -->
       <div id="image-preview-container"
         class="col-12 d-none bg-dark h-100 p-0 align-items-center justify-content-center">
         <div class="d-flex col-10 h-100 justify-content-center align-items-center flex-column">
@@ -66,10 +68,9 @@
           <button class="btn-portfolio mt-3 w-50" onclick="closePreview()">CLOSE</button>
         </div>
       </div>
+      <!-- Image Preview END -->
 
-      <span id="top"></span>
-
-      <!-- Left side icons -->
+      <!-- Left side icons START -->
       <div id="left-icons" class="d-none d-md-flex me-auto flex-column align-items-center fixed-bottom ms-3 mb-5"
         style="width: fit-content;">
         <h5 class="mb-2">
@@ -91,11 +92,11 @@
           </a>
         </h5>
       </div>
+      <!-- Left side icons END -->
 
-      <!-- Header section-->
+      <!-- Header section START -->
       <div id="header" class="d-flex flex-column justify-content-center col-10"
         style="margin-top: calc(25vh - 90px); margin-bottom: calc(25vh - 90px);">
-
         <header
           class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4">
           <div>
@@ -127,9 +128,10 @@
           </div>
         </header>
       </div>
+      <!-- Header section END -->
 
-      <span id="about"></span>
       <!-- About Me section -->
+      <span id="about"></span>
       <div class="d-flex flex-column justify-content-center col-10 reveal"
         style="margin-bottom: calc(25vh - 90px); margin-top: 62px;">
         <div
@@ -143,6 +145,7 @@
             <h3 class="mt-3 mb-3">
               <em>"This is a story all about how"...</em>
             </h3>
+            <hr>
             <h3>
               Origin story:
             </h3>
@@ -166,9 +169,7 @@
             </h3>
             <p>
               I am interested in learning different aspects of coding too, and I am <span class="gold">open to new
-                opportunities.</span> Feel free to <a href="#contact">contact me</a> or via my <a
-                href="https://www.linkedin.com/in/warwickhart/" target="_blank"
-                aria-label="Opens Warwick's LinkedIn profile. (Opens in new tab).">LinkedIn</a>.
+                opportunities.</span> Feel free to <a href="#contact">contact me</a>.
             </p>
           </div>
           <div>
@@ -195,6 +196,7 @@
             <h3 class="mt-3 mb-3">
               <em>"Learning never exhausts the mind." - Leonardo da Vinci</em>
             </h3>
+            <hr>
             <div class="animated-progress progress-orange">
               <span data-progress="95" data-text="HTML" aria-hidden="true"></span>
             </div>
@@ -261,6 +263,7 @@
             <h3 class="mt-3 mb-3">
               <em>“For the things we have to learn before we can do them, we learn by doing them.” - Aristotle</em>
             </h3>
+            <hr>
             <div>
               <table class="table table-hover table-dark mt-3">
                 <tr>
@@ -361,11 +364,12 @@
             <h3 class="mt-3 mb-3">
               <em>I built some stuff...</em>
             </h3>
+            <hr>
             <!-- START - Container Div for Projects -->
             <div class="d-flex flex-column">
               <!-- PROJECT START -->
               <div class="d-flex flex-column-reverse flex-lg-row p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-flex flex-column">
                   <h3 class="gold">
                     Gamer's-verse
                   </h3>
@@ -382,17 +386,19 @@
                     <span class="badge bg-primary">Github</span>
                     <span class="badge bg-primary">Git</span>
                   </p>
-                  <div class="flex-col-apart pe-0 pe-lg-2">
+                  <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>
                       Full Stack website, implementing user login and email verification. This site also uses an API to
                       upload images to a image hosting service.
                     </p>
-                    <div>
-                      <a href="https://github.com/BobWritesCode/ci-Project1" target="_blank" class="btn-portfolio"
+                    <div class="d-flex flex-row justify-content-center">
+                      <a href="https://github.com/BobWritesCode/ci-Project1" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Why Choose Popcorn GitHub repository. (Opens in new tab).">
                         <i class="bi bi-github"></i>
                       </a>
-                      <a href="https://bobwritescode.github.io/ci-Project1" target="_blank" class="btn-portfolio"
+                      <a href="https://bobwritescode.github.io/ci-Project1" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Why Choose Popcorn live site. (Opens in new tab).">
                         <i class="bi bi-globe"></i>
                       </a>
@@ -400,15 +406,15 @@
                   </div>
                 </div>
                 <div>
-                  <img class='img-fluid' src="./assets/imgs/germersverse.webp"
-                    alt="Gamer's-verse website snapshot." style="width:100%;">
+                  <img class='img-fluid' src="./assets/imgs/germersverse.webp" alt="Gamer's-verse website snapshot."
+                    style="width:100%;">
                 </div>
               </div>
               <!-- PROJECT END -->
               <hr>
               <!-- PROJECT START -->
               <div class="d-flex flex-column-reverse flex-lg-row p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-flex flex-column">
                   <h3 class="gold">Why Choose Popcorn?</h3>
                   <p class="mb-3">
                     <span class="badge bg-primary">HTML</span>
@@ -416,15 +422,17 @@
                     <span class="badge bg-primary">GitHub</span>
                     <span class="badge bg-primary">Git</span>
                   </p>
-                  <div class="flex-col-apart pe-0 pe-lg-2">
+                  <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>Fictional website built as my first project. The website is to showcase using HTML and CSS to
                       create a fully responsive website regardless the screen size (down to 320px width that is!).</p>
-                    <div>
-                      <a href="https://github.com/BobWritesCode/ci-Project1" target="_blank" class="btn-portfolio"
+                    <div class="d-flex flex-row justify-content-center">
+                      <a href="https://github.com/BobWritesCode/ci-Project1" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Why Choose Popcorn GitHub repository. (Opens in new tab).">
                         <i class="bi bi-github"></i>
                       </a>
-                      <a href="https://bobwritescode.github.io/ci-Project1" target="_blank" class="btn-portfolio"
+                      <a href="https://bobwritescode.github.io/ci-Project1" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Why Choose Popcorn live site. (Opens in new tab).">
                         <i class="bi bi-globe"></i>
                       </a>
@@ -440,7 +448,7 @@
               <hr>
               <!-- PROJECT START -->
               <div class="d-flex flex-column-reverse flex-lg-row p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-flex flex-column">
                   <h3 class="gold">
                     Random Result Generator
                   </h3>
@@ -451,22 +459,22 @@
                     <span class="badge bg-primary">GitHub</span>
                     <span class="badge bg-primary">Git</span>
                   </p>
-                  <div class="flex-col-apart pe-0 pe-lg-2">
+                  <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>If you are looking for a Random Result Generator? Then look no further! Originally created as a
                       project for my diploma, once the final assessment is done I plan to come back and make this
                       project shine even more.</p>
-                    <div>
-                      <!-- Project Buttons -->
-                      <a href="https://github.com/BobWritesCode/ci-Project2" target="_blank" class="btn-portfolio"
+                    <div class="d-flex flex-row justify-content-center">
+                      <a href="https://github.com/BobWritesCode/ci-Project2" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Random Result Generator GitHub repository. (Opens in new tab).">
                         <i class="bi bi-github"></i>
                       </a>
-                      <a href="https://bobwritescode.github.io/ci-Project2" target="_blank" class="btn-portfolio"
+                      <a href="https://bobwritescode.github.io/ci-Project2" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Random Result Generator live site. (Opens in new tab).">
                         <i class="bi bi-globe"></i>
                       </a>
                     </div>
-                    <!-- END - Project Buttons -->
                   </div>
                 </div>
                 <div>
@@ -478,7 +486,7 @@
               <hr>
               <!-- PROJECT START -->
               <div class="d-flex flex-column-reverse flex-lg-row p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-flex flex-column">
                   <h3 class="gold">Hotdog Empire Tycoon</h3>
                   <p class="mb-3">
                     <span class="badge bg-primary">Python</span>
@@ -487,17 +495,19 @@
                     <span class="badge bg-primary">Heroku</span>
                     <span class="badge bg-primary">Git</span>
                   </p>
-                  <div class="flex-col-apart pe-0 pe-lg-2">
+                  <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>A fun game about trying to create a hotdog empire within 10 days (20 game cycles in total). It
                       is
                       created using Python and currently deployed on Heroku. It also uses an API with Google to store
                       game data and a fully functioning leaderboard.</p>
-                    <div>
-                      <a href="https://github.com/BobWritesCode/ci-Project3" target="_blank" class="btn-portfolio"
+                    <div class="d-flex flex-row justify-content-center">
+                      <a href="https://github.com/BobWritesCode/ci-Project3" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Hotdog Empire Tycoon GitHub repository. (Opens in new tab).">
                         <i class="bi bi-github"></i>
                       </a>
-                      <a href="https://hotdog-empire-tycoon.herokuapp.com/" target="_blank" class="btn-portfolio"
+                      <a href="https://hotdog-empire-tycoon.herokuapp.com/" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Hotdog Empire Tycoon live site. (Opens in new tab).">
                         <i class="bi bi-globe"></i>
                       </a>
@@ -513,7 +523,7 @@
               <hr>
               <!-- PROJECT START -->
               <div class="d-flex flex-column-reverse flex-lg-row p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-flex flex-column">
                   <h3 class="gold">WARWICK HART.developer();</h3>
                   <p class="mb-3">
                     <span class="badge bg-primary">HTML</span>
@@ -524,16 +534,18 @@
                     <span class="badge bg-primary">GitHub</span>
                     <span class="badge bg-primary">Git</span>
                   </p>
-                  <div class="flex-col-apart pe-0 pe-lg-2">
+                  <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>The website you are currently on was built by me. The purpose of this website is to showcase my
                       portfolio and be a one stop shop to finding all relevant information about me as a developer.
                     </p>
-                    <div>
-                      <a href="https://github.com/BobWritesCode/portfoli-website" target="_blank" class="btn-portfolio"
+                    <div class="d-flex flex-row justify-content-center">
+                      <a href="https://github.com/BobWritesCode/portfoli-website" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Portfolio GitHub repository. (Opens in new tab).">
                         <i class="bi bi-github"></i>
                       </a>
-                      <a href="https://bobwritescode.github.io/portfoli-website/" target="_blank" class="btn-portfolio"
+                      <a href="https://bobwritescode.github.io/portfoli-website/" target="_blank"
+                        class="col-5 col-sm-4 d-inline-block btn-portfolio text-center"
                         aria-label="Opens Portfolio live site. (Opens in new tab).">
                         <i class="bi bi-globe"></i>
                       </a>
@@ -546,6 +558,7 @@
                 </div>
               </div>
               <!-- PROJECT END -->
+              <hr>
             </div>
             <!-- END - Container Div for Projects -->
           </div>
@@ -554,10 +567,8 @@
               }
             </h2>
           </div>
-
         </div>
       </div>
-
 
       <span id="contact"></span>
       <!--  Contact section -->
@@ -574,13 +585,20 @@
             <h3 class="mt-3 mb-3">
               <em>You never write!</em>
             </h3>
+            <hr>
             <p>
-              <i class="fa-regular fa-envelope pe-2"></i> You can contact me directly via <a
-                href="mailto:contact@warwickhart.com"
-                aria-label="Create a new email to send to Warwick. (Opens in new tab).">email</a>. <br>
-              <i class="fa-brands fa-linkedin pe-2"></i> Or connect to me on <a
-                href="https://www.linkedin.com/in/warwickhart/" target="_blank"
-                aria-label="Opens Warwick's LinkedIn profile. (Opens in new tab).">LinkedIn</a>.
+              <i class="fa-regular fa-envelope pe-2 mb-2"></i>
+              <a href="mailto:contact@warwickhart.com" class="text-decoration-none text-light"
+                aria-label="Create a new email to send to Warwick. (Opens in new tab).">contact@warwickhart.com</a>
+              <br>
+              <i class="fa-brands fa-linkedin pe-2 mb-2"></i>
+              <a href="https://www.linkedin.com/in/warwickhart/" target="_blank" class="text-decoration-none text-light"
+                aria-label="Opens Warwick's LinkedIn profile. (Opens in new tab).">https://www.linkedin.com/in/warwickhart/</a>
+              <br>
+              <i class="fa-brands fa-github pe-2 mb-2"></i>
+              <a href="https://github.com/BobWritesCode" target="_blank"
+                class="text-decoration-none text-light"
+                aria-label="Opens Warwick's GitHub profile. (Opens in new tab).">https://github.com/BobWritesCode</a>
             </p>
           </div>
           <div>
@@ -593,7 +611,8 @@
 
       <!-- Footer -->
       <footer class="col-12">
-        <address class="light-gray"><small><a href="mailto:contact@warwickhart.com" class="light-gray"
+        <address class="light-gray"><small><a href="mailto:contact@warwickhart.com"
+              class="light-gray text-decoration-none"
               aria-label="Create a new email to send to Warwick. (Opens in new tab).">Design by Warwick Hart <i
                 class="bi bi-c-circle"></i></a></small>
         </address>

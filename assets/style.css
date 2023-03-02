@@ -41,6 +41,10 @@ a {
 	color: var(--aqua);
 }
 
+a:hover {
+	color: var(--gold) !important;
+}
+
 nav {
 	border-bottom: 1px solid var(--code-orange);
 }
@@ -230,6 +234,10 @@ table td {
 	color: var(--white) !important;
 }
 
+
+.btn-dark:hover {
+	color: var(--box-bg) !important;
+}
 /* --------------------------------------------------- Left side Icons */
 
 
