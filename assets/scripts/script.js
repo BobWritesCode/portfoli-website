@@ -58,8 +58,8 @@ function reveal() {
       $('#scroll_flash').removeClass('d-none');
     });
   } else {
-    $('#scroll_flash').find('h3').fadeOut('slow', () => {
-      // $('#scroll_flash').addClass('d-none')
+    $('#scroll_flash').find('h3').fadeOut('fast', () => {
+      $('#scroll_flash').addClass('d-none');
     });
   }
 }

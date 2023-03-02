@@ -22,7 +22,7 @@
 
   <!-- Nav START -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container-fluid section">
+    <div class="container-fluid">
       <a class="navbar-brand ms-2" href="#">
         <strong>WARWICK HART</strong><span class="nav-text">.</span><span class="gold">developer</span>();
       </a>
@@ -44,7 +44,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#portfolio">Portfolio</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-0 me-lg-3">
             <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
@@ -120,7 +120,7 @@
       <!-- HERO IMAGE END -->
 
       <!-- Header section START -->
-      <div id="header" class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div id="header" class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <header class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4">
           <div>
             <h2 class="heading-text mb-0">
@@ -155,7 +155,7 @@
 
       <!-- About Me section -->
       <span id="about"></span>
-      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <div
           class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4">
           <div>
@@ -205,7 +205,7 @@
 
       <span id="tech"></span>
       <!-- Tech section -->
-      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <div
           class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4 w-100">
           <div>
@@ -221,13 +221,13 @@
             <div class="animated-progress progress-orange">
               <span data-progress="95" data-text="HTML" aria-hidden="true"></span>
             </div>
-            <p>
+            <p class="d-none">
               Including: Structuring, Semantic, Accessibility, Responsiveness.
             </p>
             <div class="animated-progress progress-blue">
               <span data-progress="85" data-text="CSS" aria-hidden="true"></span>
             </div>
-            <p>
+            <p class="d-none">
               Including: Flexbox, Grid.
             </p>
             <div class="animated-progress progress-purple">
@@ -236,7 +236,7 @@
             <div class="animated-progress progress-yellow">
               <span data-progress="85" data-text="JavaScript" aria-hidden="true"></span>
             </div>
-            <p>
+            <p class="d-none">
               Including: ES6+, Jest, APIs, JSON.
             </p>
             <div class="animated-progress progress-jquery">
@@ -271,7 +271,7 @@
 
       <span id="certifications"></span>
       <!-- My Qualifications section-->
-      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <div
           class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4 w-100">
           <div>
@@ -371,7 +371,7 @@
 
       <span id="portfolio"></span>
       <!-- My Portfolio section-->
-      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <div class="row box ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4 w-100">
           <div class="ps-0">
             <h2 class="heading-text mb-0">
@@ -380,30 +380,29 @@
           </div>
           <!-- Container Div for Projects -->
           <div class="border-start border-light ps-4">
-            <h3 class="mt-3 mb-3">
+            <h3 class="mt-3 mb-0">
               <em>I built some stuff...</em>
             </h3>
-            <hr>
             <!-- START - Container Div for Projects -->
             <div class="d-flex flex-column">
               <!-- PROJECT START -->
-              <div class="d-flex flex-column-reverse flex-lg-row p-0">
+              <div class="d-flex flex-column-reverse flex-lg-row p-0 mt-5 mb-5">
                 <div class="col-12 col-lg-6 d-flex flex-column">
-                  <h3 class="gold">
+                  <h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">
                     Gamer's-verse
                   </h3>
-                  <p class="mb-3">
-                    <span class="badge bg-primary">Full Stack</span>
-                    <span class="badge bg-primary">Django</span>
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-primary">SQL</span>
-                    <span class="badge bg-primary">BootStrap</span>
-                    <span class="badge bg-primary">JavaScript</span>
-                    <span class="badge bg-primary">JQuery</span>
-                    <span class="badge bg-primary">CSS</span>
-                    <span class="badge bg-primary">HTML</span>
-                    <span class="badge bg-primary">Github</span>
-                    <span class="badge bg-primary">Git</span>
+                  <p class="d-flex flex-wrap justify-content-center mt-3 mt-lg-0 mb-3 pe-0 pe-lg-2">
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Full Stack</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Django</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Python</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">SQL</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">BootStrap</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">JavaScript</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">JQuery</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Github</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
                   <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>
@@ -425,21 +424,25 @@
                   </div>
                 </div>
                 <div>
+                  <h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">
+                    Gamer's-verse
+                  </h3>
                   <img class='img-fluid' src="./assets/imgs/germersverse.webp" alt="Gamer's-verse website snapshot."
                     style="width:100%;">
                 </div>
               </div>
               <!-- PROJECT END -->
-              <hr>
               <!-- PROJECT START -->
-              <div class="d-flex flex-column-reverse flex-lg-row p-0">
+              <div class="d-flex flex-column-reverse flex-lg-row p-0 my-5">
                 <div class="col-12 col-lg-6 d-flex flex-column">
-                  <h3 class="gold">Why Choose Popcorn?</h3>
-                  <p class="mb-3">
-                    <span class="badge bg-primary">HTML</span>
-                    <span class="badge bg-primary">CSS</span>
-                    <span class="badge bg-primary">GitHub</span>
-                    <span class="badge bg-primary">Git</span>
+                  <h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">
+                    Why Choose Popcorn?
+                  </h3>
+                  <p class="d-flex flex-wrap justify-content-center mt-3 mt-lg-0 mb-3 pe-0 pe-lg-2">
+                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">GitHub</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
                   <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>Fictional website built as my first project. The website is to showcase using HTML and CSS to
@@ -459,24 +462,26 @@
                   </div>
                 </div>
                 <div>
+                  <h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">
+                    Why Choose Popcorn?
+                  </h3>
                   <img class='img-fluid' src="./assets/imgs/why-choose-popcorn.webp"
                     alt="Why Choose Popcorn website snapshot." style="width:100%;">
                 </div>
               </div>
               <!-- PROJECT END -->
-              <hr>
               <!-- PROJECT START -->
-              <div class="d-flex flex-column-reverse flex-lg-row p-0">
+              <div class="d-flex flex-column-reverse flex-lg-row p-0 my-5">
                 <div class="col-12 col-lg-6 d-flex flex-column">
-                  <h3 class="gold">
+                  <h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">
                     Random Result Generator
                   </h3>
-                  <p class="mb-3">
-                    <span class="badge bg-primary">HTML</span>
-                    <span class="badge bg-primary">CSS</span>
-                    <span class="badge bg-primary">JavaScript</span>
-                    <span class="badge bg-primary">GitHub</span>
-                    <span class="badge bg-primary">Git</span>
+                  <p class="d-flex flex-wrap justify-content-center mt-3 mt-lg-0 mb-3 pe-0 pe-lg-2">
+                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">JavaScript</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">GitHub</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
                   <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>If you are looking for a Random Result Generator? Then look no further! Originally created as a
@@ -497,22 +502,26 @@
                   </div>
                 </div>
                 <div>
+                  <h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">
+                    Random Result Generator
+                  </h3>
                   <img class='img-fluid' src="./assets/imgs/random-result-generator.webp"
                     alt="Random Result Generator snapshot." style="width:100%;">
                 </div>
               </div>
               <!-- PROJECT END -->
-              <hr>
               <!-- PROJECT START -->
-              <div class="d-flex flex-column-reverse flex-lg-row p-0">
+              <div class="d-flex flex-column-reverse flex-lg-row p-0 my-5"">
                 <div class="col-12 col-lg-6 d-flex flex-column">
-                  <h3 class="gold">Hotdog Empire Tycoon</h3>
-                  <p class="mb-3">
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-primary">API</span>
-                    <span class="badge bg-primary">GitHub</span>
-                    <span class="badge bg-primary">Heroku</span>
-                    <span class="badge bg-primary">Git</span>
+                  <h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">
+                    Hotdog Empire Tycoon
+                  </h3>
+                  <p class="d-flex flex-wrap justify-content-center mt-3 mt-lg-0 mb-3 pe-0 pe-lg-2">
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Python</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">API</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">GitHub</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Heroku</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
                   <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>A fun game about trying to create a hotdog empire within 10 days (20 game cycles in total). It
@@ -534,24 +543,28 @@
                   </div>
                 </div>
                 <div>
+                  <h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">
+                    Hotdog Empire Tycoon
+                  </h3>
                   <img class='img-fluid' src="./assets/imgs/hotdog-empire-tycoon.webp"
                     alt="Hotdog Empire Tycoon snapshot." style="width:100%;">
                 </div>
               </div>
               <!-- PROJECT END -->
-              <hr>
               <!-- PROJECT START -->
-              <div class="d-flex flex-column-reverse flex-lg-row p-0">
+              <div class="d-flex flex-column-reverse flex-lg-row p-0 my-5">
                 <div class="col-12 col-lg-6 d-flex flex-column">
-                  <h3 class="gold">WARWICK HART.developer();</h3>
-                  <p class="mb-3">
-                    <span class="badge bg-primary">HTML</span>
-                    <span class="badge bg-primary">CSS</span>
-                    <span class="badge bg-primary">JavaScript</span>
-                    <span class="badge bg-primary">JQuery</span>
-                    <span class="badge bg-primary">BootStrap</span>
-                    <span class="badge bg-primary">GitHub</span>
-                    <span class="badge bg-primary">Git</span>
+                  <h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">
+                    WARWICK HART.developer();
+                  </h3>
+                  <p class="d-flex flex-wrap justify-content-center mb-3  pe-0 pe-lg-2">
+                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">JavaScript</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">JQuery</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">BootStrap</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">GitHub</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
                   <div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill">
                     <p>The website you are currently on was built by me. The purpose of this website is to showcase my
@@ -572,6 +585,9 @@
                   </div>
                 </div>
                 <div>
+                  <h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">
+                    WARWICK HART.developer();
+                  </h3>
                   <img class='img-fluid' src="./assets/imgs/warwick-hart-developer.webp"
                     alt="Warwick Hart.developer snapshot." style="width:100%;">
                 </div>
@@ -591,7 +607,7 @@
 
       <span id="contact"></span>
       <!--  Contact section -->
-      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5 mt-5">
+      <div class="section d-flex flex-column justify-content-center col-10 reveal mb-5">
         <div
           class="box d-flex flex-column justify-content-center ps-3 ps-md-4 ps-lg-5 pe-2 pe-sm-3 pe-md-4 pe-lg-5 pt-4 pb-4 w-100">
           <div>
@@ -611,12 +627,12 @@
               <br>
               <i class="fa-brands fa-linkedin pe-2 mb-2"></i>
               <a href="https://www.linkedin.com/in/warwickhart/" target="_blank" class="text-decoration-none text-light"
-                aria-label="Opens Warwick's LinkedIn profile. (Opens in new tab).">https://www.linkedin.com/in/warwickhart/</a>
+                aria-label="Opens Warwick's LinkedIn profile. (Opens in new tab).">linkedin.com/in/warwickhart/</a>
               <br>
               <i class="fa-brands fa-github pe-2 mb-2"></i>
               <a href="https://github.com/BobWritesCode" target="_blank"
                 class="text-decoration-none text-light"
-                aria-label="Opens Warwick's GitHub profile. (Opens in new tab).">https://github.com/BobWritesCode</a>
+                aria-label="Opens Warwick's GitHub profile. (Opens in new tab).">github.com/BobWritesCode</a>
             </p>
           </div>
           <div>
