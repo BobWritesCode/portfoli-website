@@ -43,10 +43,10 @@ function reveal() {
       $('#scroll_flash').removeClass('d-none')
     });
 
-    }else {
+  }else {
     $('#scroll_flash').find('h3').fadeOut("slow", function() {
       // $('#scroll_flash').addClass('d-none')
-  });
+    });
   };
 }
 
