@@ -36,7 +36,12 @@ function reveal() {
       if (index == '1') {
         toggleBars('close');
       }
-    }
+    };
+    if (siteTop != 0) {
+      $('.flash').addClass('d-none')
+    }else {
+      $('.flash').removeClass('d-none')
+    };
   });
 }
 

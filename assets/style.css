@@ -24,7 +24,6 @@
 body {
 	background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
 	background-size: 100vw 1000vh;
-	/* color: var(--white); */
 	overflow-x: hidden;
 }
 
@@ -61,6 +60,49 @@ nav {
 
 .light-gray {
 	color: var(--light-gray) !important;
+}
+
+
+/* --------------------------------------------------- Circle border */
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+	max-height: 53vh;
+	object-fit: contain;
+}
+
+.circle img {
+	max-height: 50vh;
+	max-width: 70vw;
+	object-fit: contain;
+	box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+	-o-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+	border-radius:inherit;
+}
+
+/* --------------------------------------------------- Scroll text */
+
+.flash {
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 3s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; }
+	50% { opacity: .1; }
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 0; }
+	50% { opacity: .9; }
+	100% { opacity: 0; }
 }
 
 /* --------------------------------------------------- Image Preview */
