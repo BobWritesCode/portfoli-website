@@ -65,7 +65,7 @@
         class="col-12 d-none bg-dark h-100 p-0 align-items-center justify-content-center">
         <div class="d-flex col-10 h-100 justify-content-center align-items-center flex-column">
           <img src="" alt="Certificate" class="">
-          <button class="btn-portfolio mt-3 w-50" onclick="closePreview()">CLOSE</button>
+          <button id='btnClosePreview' class="btn-portfolio mt-3 w-50">CLOSE</button>
         </div>
       </div>
       <!-- Image Preview END -->
@@ -140,7 +140,7 @@
             </p>
             <p class="mb-0">
               <span class="header-inner-code">languages = [</span>
-              <span id="header-list">Python, Django, JavaScript, JQuery, BootyStrap, CSS, HTML, MySQL, LUA, VBA</span>
+              <span id="header-list">Python, Django, TypeScript, JavaScript, JQuery, BootyStrap, CSS, HTML, MySQL, LUA, VBA</span>
               <span class="header-inner-code">];</span>
             </p>
           </div>
@@ -285,78 +285,9 @@
             </h3>
             <hr>
             <div>
-              <table class="table table-hover table-dark mt-3">
-                <tr>
-                  <td><i class="fa-solid fa-o"></i></td>
-                  <td class="d-none d-md-table-cell">Code&nbsp;Institute</td>
-                  <td class="orange">Full Stack Developer Diploma<em class="text-light">(In&nbsp;progress)</em></td>
-                  <td class="text-center"></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">Django skill assessment</td>
-                  <td class="text-center"></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">Git skill assessment</td>
-                  <td class="text-center"></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">GitHub Issues and Projects for Teams</td>
-                  <td class="text-center"><button class="btn-portfolio"
-                      onclick="openPreview('github-issues-and-projects-for-teams.png')"><i
-                        class="bi bi-file-medical"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">Simplifying Web Development with Accessibility Best Practices</td>
-                  <td class="text-center"><button class="btn-portfolio"
-                      onclick="openPreview('simplifying-web-development-with-accessibility-best-practices.png')"><i
-                        class="bi bi-file-medical"></i></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">HTML Essential Training</td>
-                  <td class="text-center"><button class="btn-portfolio"
-                      onclick="openPreview('html-essential-training.png')"><i class="bi bi-file-medical"></i></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">Git Essential Training: The Basics</td>
-                  <td class="text-center"><button class="btn-portfolio"
-                      onclick="openPreview('git-essential-training-the-basics.png')"><i
-                        class="bi bi-file-medical"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-solid fa-o"></i></td>
-                  <td class="d-none d-md-table-cell">Code&nbsp;Institute</td>
-                  <td class="orange">5 Day Coding Challenge</td>
-                  <td class="text-center"><button class="btn-portfolio"
-                      onclick="openPreview('five-day-coding-challenge.png')"><i class="bi bi-file-medical"></i></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">HTML skill assessment</td>
-                  <td class="text-center"></td>
-                </tr>
-                <tr>
-                  <td><i class="fa-brands fa-linkedin"></i></td>
-                  <td class="d-none d-md-table-cell">LinkedIn</td>
-                  <td class="orange">CSS skill assessment</td>
-                  <td class="text-center"></td>
-                </tr>
+              <table id='certificate_table'>
+                <tbody>
+                </tbody>
               </table>
             </div>
           </div>
@@ -558,11 +489,12 @@
                     WARWICK HART.developer();
                   </h3>
                   <p class="d-flex flex-wrap justify-content-center mb-3  pe-0 pe-lg-2">
-                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
-                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">TypeScript</span>
                     <span class="badge mx-1 px-3 my-1 bg-primary">JavaScript</span>
                     <span class="badge mx-1 px-3 my-1 bg-primary">JQuery</span>
                     <span class="badge mx-1 px-3 my-1 bg-primary">BootStrap</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">HTML</span>
+                    <span class="badge mx-1 px-3 my-1 bg-primary">CSS</span>
                     <span class="badge mx-1 px-3 my-1 bg-primary">GitHub</span>
                     <span class="badge mx-1 px-3 my-1 bg-primary">Git</span>
                   </p>
@@ -658,7 +590,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <script src="assets/scripts/script.js"></script>
+  <script src="assets/scripts/script.js" type="module"></script>
+  <script src="assets/scripts/certificates.js" type="module"></script>
 </body>
 
 </html>

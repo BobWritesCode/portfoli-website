@@ -1,4 +1,28 @@
-/* global $ */
+
+import {
+  Certificates,
+  certificates
+} from "./certificates.js";
+const certs: Certificates[] = certificates
+
+function createCertTable () {
+  const table = $('#certificate_table')
+  certs.forEach( cert => {
+    let newTR = $('<tr class="text-light"></tr>')
+    newTR.append(`<td>${cert.icon}</td>`)
+    newTR.append(`<td class="d-none d-md-table-cell">${cert.institute}</td>`)
+    newTR.append(`<td class="orange">${cert.certName}</td>`)
+    if (cert.certURL) {
+      let ele = $(`<td class="text-center"><button class="btn-portfolio"><i
+        class="bi bi-file-medical"></i></button></td>`).on('click', function() {openPreview(`${cert.certURL}`)})
+      newTR.append(ele)
+    } else {
+      newTR.append(`<td></td>`)
+    }
+    table.find('tbody').append(newTR)
+  })
+  table.addClass('table table-hover table-dark mt-3')
+}
 
 /**
  * Activates the reveal effect when scrolling through the page.
@@ -127,7 +151,9 @@ $(window).on('scroll', function() {
   reveal();
 });
 
-$(window).on('ready', function() {
+$(document).ready( function() {
+  $('#btnClosePreview').on('click', function(){closePreview()})
+  createCertTable();
   reveal();
   // Checking to see if tech-section has started open
   // if so, then open progress bars
