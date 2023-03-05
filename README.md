@@ -61,13 +61,13 @@ I created modules so each section would be in its own code block theme.
 
 ---
 
-
 ## Technologies
 
 This site is built using:
 
 - HTML 5
 - CSS 3
+- TypeScript
 - JavaScript
 - JQuery v3.6.1
 - BootStrap v5.0.2
@@ -103,8 +103,7 @@ Having the code though come in from the right, caused the page to widen further 
 ```javascript
 // Every time the page scroll run these functions
 window.addEventListener("scroll", function () {
-   reveal();
-   closeDropMenu();
+  reveal();
 });
 ```
 
@@ -113,49 +112,82 @@ window.addEventListener("scroll", function () {
  * Activates the reveal effect when scrolling through the page.
  */
 function reveal() {
-  // Section needs to pass the 20% mark from the bottom of the window to show.
-  const elementVisible = window.innerHeight * 0.8;
-  // Get top of page element.
-  const topOfPage = document.getElementById('top');
-  // Get top of site.
-  const siteTop = topOfPage.getBoundingClientRect().top;
-  $.each($('.reveal'), function (index, value) {
-    if (siteTop > 10) {
-      // If at top of page hide all but top section
-      value.classList.remove('active');
-      if (index == '1') {
-        toggleBars('close');
-      }
-    } else if (
-      value.getBoundingClientRect().top < elementVisible &&
-      siteTop != 0
-    ) {
-      value.classList.add('active');
-      if (index == '1') {
-        toggleBars('open');
-      }
-    } else {
-      value.classList.remove('active');
-      if (index == '1') {
-        toggleBars('close');
-      }
+    // Section needs to pass the 20% mark from the bottom of the window to show.
+    const elementVisible = window.innerHeight * 0.8;
+    // Get top page element.
+    const siteTop = document.getElementById("top").getBoundingClientRect().top;
+    // Get bottom page element.
+    const siteBottom = document.getElementById("footer").getBoundingClientRect().bottom;
+    // Check if user at bottom of page.
+    if (siteBottom < window.innerHeight + 1) {
+        // If user at bottom of page, show all sections
+        $.each($(".reveal"), (_, val) => {
+            val.classList.add("active");
+            if (val.getAttribute('id') === 'tech-section') {
+                toggleBars("open");
+            }
+        });
+        // Check to see if user at top of page.
     }
-  });
+    else if (siteTop > 10) {
+        // If at top of page hide all but top section
+        $.each($(".reveal"), (_, val) => {
+            val.classList.remove("active");
+            if (val.getAttribute('id') === 'tech-section') {
+                toggleBars("close");
+            }
+            ;
+        });
+        // If user not at bottom of page.
+    }
+    else {
+        // As scroll check each element.
+        $.each($(".reveal"), (_, val) => {
+            if (val.getBoundingClientRect().top < elementVisible && siteTop !== 0) {
+                val.classList.add("active");
+                if (val.getAttribute('id') === 'tech-section') {
+                    toggleBars("open");
+                }
+            }
+            else {
+                val.classList.remove("active");
+                if (val.getAttribute('id') === 'tech-section') {
+                    // Tech sections is not currently being shown
+                    toggleBars("close");
+                }
+            }
+        });
+    }
+    if (siteTop === 0) {
+        $("#scroll_flash")
+            .find("h3")
+            .delay(2000)
+            .fadeIn("slow", () => {
+            $("#scroll_flash").removeClass("d-none");
+        });
+    }
+    else {
+        $("#scroll_flash")
+            .find("h3")
+            .fadeOut("fast", () => {
+            $("#scroll_flash").addClass("d-none");
+        });
+    }
 }
 ```
 
 ```css
 /* Reveal module from right to left */
 .reveal {
- position: relative;
- transform: translateX(150px);
- opacity: 0;
- transition: 2s all ease;
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 2s all ease;
 }
 
 .reveal.active {
- transform: translateY(0);
- opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 ```
 
@@ -171,33 +203,33 @@ To avoid that happening I created a container that is always there but you can't
   class="col-12 d-none bg-dark h-100 p-0 align-items-center justify-content-center">
   <div class="d-flex col-10 h-100 justify-content-center align-items-center flex-column">
     <img src="" alt="Certificate" class="">
-    <button class="btn-portfolio mt-3 w-50" onclick="closePreview()">CLOSE</button>
+    <button id='btnClosePreview' class="btn-portfolio mt-3 w-50">CLOSE</button>
   </div>
 </div>
 ```
 
 ```css
 #image-preview-container {
- position: fixed !important;
- top: 0;
- z-index:5000 !important;
+  position: fixed !important;
+  top: 0;
+  z-index:5000 !important;
 }
 
 #image-preview-container img {
- border: var(--code-orange) solid 8px;
- max-width: 75vw;
- max-height: 75vh;
+  border: var(--code-orange) solid 8px;
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 #image-preview-container button {
   border-color : var(--code-orange) !important;
- color: var(--code-orange) !important;
- background-color: rgba(0, 0, 0, 0);
+  color: var(--code-orange) !important;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #image-preview-container button:hover {
- background-color: var(--code-orange) !important;
- color: #000000 !important;
+  background-color: var(--code-orange) !important;
+  color: #000000 !important;
 }
 ```
 
