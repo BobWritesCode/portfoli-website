@@ -1,5 +1,15 @@
 import { certificates } from "./certificates.js";
+import { techSkills } from "./techskills.js";
 const certs = certificates;
+const skills = techSkills;
+function createSkillBars() {
+    const container = $('#skill-bars-container');
+    skills.forEach(skill => {
+        let newDiv = $(`<div class="animated-progress ${skill.css}"></div>`);
+        newDiv.append(`<span data-progress="${skill.dataProgress}" data-text="${skill.dataText}" aria-hidden="true"></span>`);
+        container.append(newDiv);
+    });
+}
 function createCertTable() {
     const table = $('#certificate_table');
     certs.forEach(cert => {
@@ -143,6 +153,7 @@ $(window).on('scroll', function () {
 $(document).ready(function () {
     $('#btnClosePreview').on('click', function () { closePreview(); });
     createCertTable();
+    createSkillBars();
     reveal();
     // Checking to see if tech-section has started open
     // if so, then open progress bars
