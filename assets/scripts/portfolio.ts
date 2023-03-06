@@ -3,7 +3,7 @@ export type Portfolio = {
   badges: string[];
   description: string;
   imageURL: string;
-  imageAlt: string,
+  imageAlt: string;
   repoURL: string;
   liveURL: string;
 };
@@ -43,6 +43,35 @@ export const portfolio = [
     liveURL: "https://server-directory-website.herokuapp.com/",
   },
   {
+    name: "WARWICK HART.developer();",
+    badges: [
+      "TypeScript",
+      "JavaScript",
+      "JQuery",
+      "BootStrap",
+      "CSS",
+      "HTML",
+      "Github",
+      "Git",
+    ],
+    description:
+      "The website you are currently on was built by me. The purpose of this website is to showcase my portfolio and be a one stop shop to finding all relevant information about me as a developer.",
+    imageURL: "./assets/imgs/warwick-hart-developer.webp",
+    imageAlt: "WARWICK HART.developer website snapshot.",
+    repoURL: "https://github.com/BobWritesCode/portfoli-website",
+    liveURL: "https://bobwritescode.github.io/portfoli-website/",
+  },
+  {
+    name: "Hotdog Empire Tycoon",
+    badges: ["Python", "API", "HeroKu", "GitHub", "Git"],
+    description:
+      "A fun game about trying to create a hotdog empire within 10 days (20 game cycles in total). It is created using Python and currently deployed on Heroku. It also uses an API with Google to store game data and a fully functioning leaderboard.",
+    imageURL: "./assets/imgs/hotdog-empire-tycoon.webp",
+    imageAlt: "Hotdog Empire Tycoon game snapshot.",
+    repoURL: "https://github.com/BobWritesCode/ci-Project3",
+    liveURL: "https://hotdog-empire-tycoon.herokuapp.com/",
+  },
+  {
     name: "Why Choose Popcorn?",
     badges: ["HTML", "CSS", "GitHub", "Git"],
     description:
@@ -61,34 +90,5 @@ export const portfolio = [
     imageAlt: "Random Result Generator website snapshot.",
     repoURL: "https://github.com/BobWritesCode/ci-Project2",
     liveURL: "https://bobwritescode.github.io/ci-Project2",
-  },
-  {
-    name: "Hotdog Empire Tycoon",
-    badges: ["Python", "API", "HeroKu", "GitHub", "Git"],
-    description:
-      "A fun game about trying to create a hotdog empire within 10 days (20 game cycles in total). It is created using Python and currently deployed on Heroku. It also uses an API with Google to store game data and a fully functioning leaderboard.",
-    imageURL: "./assets/imgs/hotdog-empire-tycoon.webp",
-    imageAlt: "Hotdog Empire Tycoon game snapshot.",
-    repoURL: "https://github.com/BobWritesCode/ci-Project3",
-    liveURL: "https://hotdog-empire-tycoon.herokuapp.com/",
-  },
-  {
-    name: "WARWICK HART.developer();",
-    badges: [
-      "TypeScript",
-      "JavaScript",
-      "JQuery",
-      "BootStrap",
-      "CSS",
-      "HTML",
-      "Github",
-      "Git",
-    ],
-    description:
-      "The website you are currently on was built by me. The purpose of this website is to showcase my portfolio and be a one stop shop to finding all relevant information about me as a developer.",
-    imageURL: "./assets/imgs/warwick-hart-developer.webp",
-    imageAlt: "WARWICK HART.developer website snapshot.",
-    repoURL: "https://github.com/BobWritesCode/portfoli-website",
-    liveURL: "https://bobwritescode.github.io/portfoli-website/",
   },
 ];
