@@ -9,8 +9,15 @@ import {
   techSkills
 } from './techskills.js';
 
+import {
+  Portfolio,
+  portfolio
+} from './portfolio.js';
+
 const certs: Certificates[] = certificates;
 const skills: TechSkills[] = techSkills;
+const projects: Portfolio[] =  portfolio;
+
 
 /**
  * Open image preview in center of viewpoint.
@@ -29,6 +36,37 @@ function openPreview(data:string): void {
 function closePreview(): void {
   $('#image-preview-container').removeClass('d-flex').addClass('d-none');
 }
+
+function createProjects() {
+  console.log('createProjects');
+
+  const container = $('#projects-container');
+  projects.forEach(project => {
+    const newDivMain = $('<div class="d-flex flex-column-reverse flex-lg-row pt-0 pb-0 mt-5 mb-5"></div>');
+    const newDiv1 = $(`<div class='col-12 col-lg-6 d-flex flex-column'></div>`);
+    newDiv1.append(`<h3 class="d-none d-lg-block gold mb-3 mt-3 mt-lg-0 pe-0 pe-lg-2 text-center">${project.name}</h3>`);
+    const newP = $('<p class="d-flex flex-wrap justify-content-center mt-3 mt-lg-0 mb-3 pe-0 pe-lg-2"></p>');
+    project.badges.forEach(badge => {
+      newP.append(`<span class="badge mx-1 px-3 my-1 bg-primary">${badge}</span>`);
+    });
+    newDiv1.append(newP);
+    const newDiv2 = $('<div class="d-flex flex-column flex-wrap pe-0 pe-lg-2 justify-content-between flex-fill"></div>');
+    newDiv2.append(`<p>${project.description}</p>`);
+    const newDiv3 = $('<div class="d-flex flex-row justify-content-center"></div>');
+    newDiv3.append(`<a href="${project.repoURL}" target="_blank" class="col-5 col-sm-4 d-inline-block btn-portfolio text-center" aria-label="Opens Gamer's-verse GitHub repository. (Opens in new tab)."> <i class="bi bi-github"></i></a>`);
+    newDiv3.append(`<a href="${project.liveURL}" target="_blank" class="col-5 col-sm-4 d-inline-block btn-portfolio text-center" aria-label="Opens Gamer's-verse live site. (Opens in new tab)."><i class="bi bi-globe"></i></a>`);
+    newDiv2.append(newDiv3);
+    newDiv1.append(newDiv2);
+    newDivMain.append(newDiv1);
+    const newDiv4 = $('<div ></div>');
+    newDiv4.append(`<h3 class="d-block d-lg-none gold mb-3 mt-3 mt-lg-0 text-center">${project.name}</h3>`);
+    newDiv4.append(`<img class='img-fluid' src="${project.imageURL}" alt="${project.imageAlt}"
+    style="width:100%;">`);
+    newDivMain.append(newDiv4);
+    container.append(newDivMain);
+  });
+}
+
 
 function createSkillBars() {
   const container = $('#skill-bars-container');
@@ -169,6 +207,7 @@ $(window).on('scroll', function() {
 
 $(document).ready( function() {
   $('#btnClosePreview').on('click', function(){closePreview();});
+  createProjects();
   createCertTable();
   createSkillBars();
   reveal();
