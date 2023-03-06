@@ -18,7 +18,6 @@ const certs: Certificates[] = certificates;
 const skills: TechSkills[] = techSkills;
 const projects: Portfolio[] =  portfolio;
 
-
 /**
  * Open image preview in center of viewpoint.
  * @param {string} data Received from the DOM
@@ -67,7 +66,6 @@ function createProjects(): void {
     container.append(newDivMain);
   });
 }
-
 
 /**
  * Creates skill bars and adds them to the the DOM in the tech skills section.
@@ -118,6 +116,8 @@ function reveal(): void {
     document.getElementById('footer') as HTMLElement
   ).getBoundingClientRect().bottom;
 
+  scrollFlash(siteTop);
+
   // Check if user at bottom of page.
   if (siteBottom < window.innerHeight + 1) {
     // If user at bottom of page, show all sections
@@ -155,15 +155,29 @@ function reveal(): void {
       }
     });
   }
+}
 
-  if (siteTop === 0) {
+/**
+* Is progress bar animation currently happening.
+*/
+let scrollFlashInProgress = false;
+
+/**
+* Controls the flashing SCROLL text in DOM.
+* @param {number} siteTop Used to check if window is scrolled to top of the page.
+*/
+function scrollFlash(siteTop: number) {
+  if (!scrollFlashInProgress && siteTop === 0) {
+    scrollFlashInProgress = true;
     $('#scroll_flash')
       .find('h3')
       .delay(2000)
       .fadeIn('slow', () => {
         $('#scroll_flash').removeClass('d-none');
       });
-  } else {
+  }
+  if (scrollFlashInProgress && siteTop !== 0) {
+    scrollFlashInProgress = false;
     $('#scroll_flash')
       .find('h3')
       .fadeOut('fast', () => {
@@ -174,13 +188,11 @@ function reveal(): void {
 
 /**
 * Is progress bar animation currently happening.
-* @type {boolean}
 */
 let inProgress = false;
 
 /**
 * Is progress bar full.
-* @type {boolean}
 */
 let full = false;
 

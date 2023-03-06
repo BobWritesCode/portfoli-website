@@ -94,6 +94,7 @@ function reveal() {
     const siteTop = document.getElementById('top').getBoundingClientRect().top;
     // Get bottom page element.
     const siteBottom = document.getElementById('footer').getBoundingClientRect().bottom;
+    scrollFlash(siteTop);
     // Check if user at bottom of page.
     if (siteBottom < window.innerHeight + 1) {
         // If user at bottom of page, show all sections
@@ -133,7 +134,15 @@ function reveal() {
             }
         });
     }
-    if (siteTop === 0) {
+}
+/**
+* Is progress bar animation currently happening.
+* @type {boolean}
+*/
+let scrollFlashInProgress = false;
+function scrollFlash(siteTop) {
+    if (!scrollFlashInProgress && siteTop === 0) {
+        scrollFlashInProgress = true;
         $('#scroll_flash')
             .find('h3')
             .delay(2000)
@@ -141,7 +150,8 @@ function reveal() {
             $('#scroll_flash').removeClass('d-none');
         });
     }
-    else {
+    if (scrollFlashInProgress && siteTop !== 0) {
+        scrollFlashInProgress = false;
         $('#scroll_flash')
             .find('h3')
             .fadeOut('fast', () => {
