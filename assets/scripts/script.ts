@@ -37,9 +37,10 @@ function closePreview(): void {
   $('#image-preview-container').removeClass('d-flex').addClass('d-none');
 }
 
-function createProjects() {
-  console.log('createProjects');
-
+/**
+ * Creates projects sections and applies to portfolio section of DOM.
+ */
+function createProjects(): void {
   const container = $('#projects-container');
   projects.forEach(project => {
     const newDivMain = $('<div class="d-flex flex-column-reverse flex-lg-row pt-0 pb-0 mt-5 mb-5"></div>');
@@ -68,7 +69,10 @@ function createProjects() {
 }
 
 
-function createSkillBars() {
+/**
+ * Creates skill bars and adds them to the the DOM in the tech skills section.
+ */
+function createSkillBars(): void {
   const container = $('#skill-bars-container');
   skills.forEach(skill => {
   const newDiv = $(`<div class='animated-progress ${skill.css}'></div>`);
@@ -77,7 +81,10 @@ function createSkillBars() {
   });
 }
 
-function createCertTable () {
+/**
+ * Creates certificate table and adds to DOM qualifications section.
+ */
+function createCertTable (): void {
   const table = $('#certificate_table');
   certs.forEach( cert => {
     const newTR = $('<tr class="text-light"></tr>');

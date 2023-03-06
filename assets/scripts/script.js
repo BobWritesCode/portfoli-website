@@ -21,8 +21,10 @@ function openPreview(data) {
 function closePreview() {
     $('#image-preview-container').removeClass('d-flex').addClass('d-none');
 }
+/**
+ * Creates projects sections and applies to portfolio section of DOM.
+ */
 function createProjects() {
-    console.log('createProjects');
     const container = $('#projects-container');
     projects.forEach(project => {
         const newDivMain = $('<div class="d-flex flex-column-reverse flex-lg-row pt-0 pb-0 mt-5 mb-5"></div>');
@@ -49,6 +51,9 @@ function createProjects() {
         container.append(newDivMain);
     });
 }
+/**
+ * Creates skill bars and adds them to the the DOM in the tech skills section.
+ */
 function createSkillBars() {
     const container = $('#skill-bars-container');
     skills.forEach(skill => {
@@ -57,6 +62,9 @@ function createSkillBars() {
         container.append(newDiv);
     });
 }
+/**
+ * Creates certificate table and adds to DOM qualifications section.
+ */
 function createCertTable() {
     const table = $('#certificate_table');
     certs.forEach(cert => {
