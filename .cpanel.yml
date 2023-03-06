@@ -7,4 +7,8 @@ deployment:
     - /bin/cp assets/style.css $DEPLOYPATH/assets
     - /bin/cp assets/scripts/jquery.js $DEPLOYPATH/assets/scripts
     - /bin/cp assets/scripts/script.js $DEPLOYPATH/assets/scripts
+    - /bin/cp assets/scripts/certificates.js $DEPLOYPATH/assets/scripts
+    - /bin/cp assets/scripts/portfolio.js $DEPLOYPATH/assets/scripts
+    - /bin/cp assets/scripts/techskills.js $DEPLOYPATH/assets/scripts
+
     - /bin/cp -R assets/imgs $DEPLOYPATH/assets
