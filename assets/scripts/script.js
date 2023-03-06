@@ -137,9 +137,12 @@ function reveal() {
 }
 /**
 * Is progress bar animation currently happening.
-* @type {boolean}
 */
 let scrollFlashInProgress = false;
+/**
+* Controls the flashing SCROLL text in DOM.
+* @param {number} siteTop Used to check if window is scrolled to top of the page.
+*/
 function scrollFlash(siteTop) {
     if (!scrollFlashInProgress && siteTop === 0) {
         scrollFlashInProgress = true;
@@ -161,12 +164,10 @@ function scrollFlash(siteTop) {
 }
 /**
 * Is progress bar animation currently happening.
-* @type {boolean}
 */
 let inProgress = false;
 /**
 * Is progress bar full.
-* @type {boolean}
 */
 let full = false;
 /**

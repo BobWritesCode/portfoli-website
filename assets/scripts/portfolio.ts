@@ -59,7 +59,7 @@ export const portfolio = [
     imageURL: "./assets/imgs/warwick-hart-developer.webp",
     imageAlt: "WARWICK HART.developer website snapshot.",
     repoURL: "https://github.com/BobWritesCode/portfoli-website",
-    liveURL: "https://bobwritescode.github.io/portfoli-website/",
+    liveURL: "https://www.warwickhart.com",
   },
   {
     name: "Hotdog Empire Tycoon",
