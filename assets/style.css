@@ -1,334 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Source+Code+Pro&display=swap");
 
 :root {
-	--body-bg: rgb(103, 0, 238);
-	--box-bg: rgb(30, 30, 30);
-	--light-gray: rgb(159, 159, 159);
-	--menu-bg: rgb(53, 53, 53);
-	--gold: #FFD700;
-	--code-blue: rgb(151, 151, 255);
-	--code-light-blue: rgb(169, 169, 255);
-	--aqua: rgb(0, 232, 158);
-	--code-orange: rgb(255, 183, 0);
-	--blue: rgb(4, 4, 123);
-	--white: rgb(241, 255, 250);
-	--page-border: 20vw;
+  --body-bg: rgb(103, 0, 238);
+  --box-bg: rgb(30, 30, 30);
+  --light-gray: rgb(159, 159, 159);
+  --menu-bg: rgb(53, 53, 53);
+  --gold: #ffd700;
+  --code-blue: rgb(151, 151, 255);
+  --code-light-blue: rgb(169, 169, 255);
+  --aqua: rgb(0, 232, 158);
+  --code-orange: rgb(255, 183, 0);
+  --blue: rgb(4, 4, 123);
+  --white: rgb(241, 255, 250);
+  --page-border: 20vw;
 }
 
 /* --------------------------------------------------- Base elements */
 
 * {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
-	background-size: 100vw 1000vh;
-	overflow-x: hidden;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
+  background-image: linear-gradient(to right, #17123d, #3d387e, #323254);
+  background-size: 100vw 1000vh;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 body * {
-	font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 hr {
-	margin: 10px 0;
-	border-color: rgb(112, 112, 112);
+  margin: 10px 0;
+  border-color: rgb(112, 112, 112);
 }
 
 a {
-	color: var(--aqua);
+  color: var(--aqua);
 }
 
 a:hover {
-	color: var(--gold) !important;
+  color: var(--gold) !important;
 }
 
 nav {
-	border-bottom: 1px solid var(--code-orange);
+  border-bottom: 1px solid var(--code-orange);
 }
 
 /* --------------------------------------------------- Colour classes */
 
 .orange {
-	color: var(--code-orange) !important;
+  color: var(--code-orange) !important;
 }
 
 .gold {
-	color: var(--gold) !important;
+  color: var(--gold) !important;
 }
 
 .light-gray {
-	color: var(--light-gray) !important;
+  color: var(--light-gray) !important;
 }
-
 
 /* --------------------------------------------------- Circle border */
 
 .circle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-	max-height: 53vh;
-	object-fit: contain;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  max-height: 53vh;
+  object-fit: contain;
 }
 
 .circle img {
-	max-height: 50vh;
-	max-width: 70vw;
-	object-fit: contain;
-	box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
-	-webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
-	-o-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
-	border-radius:inherit;
+  max-height: 50vh;
+  max-width: 70vw;
+  object-fit: contain;
+  box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
+  border-radius: inherit;
 }
 
 /* --------------------------------------------------- Scroll text */
 
 #scroll_flash {
-	-webkit-animation: flash linear 1s infinite;
-	animation: flash linear 3s infinite;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 3s infinite;
 }
 @-webkit-keyframes flash {
-	0% { opacity: 1; }
-	50% { opacity: .1; }
-	100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes flash {
-	0% { opacity: 0; }
-	50% { opacity: .9; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* --------------------------------------------------- Image Preview */
 
 #image-preview-container {
-	position: fixed !important;
-	top: 0;
-	z-index:5000 !important;
+  position: fixed !important;
+  top: 0;
+  z-index: 5000 !important;
 }
 
 #image-preview-container img {
-	border: var(--code-orange) solid 8px;
-	max-width: 75vw;
-	max-height: 75vh;
+  border: var(--code-orange) solid 8px;
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 #image-preview-container button {
-
-	border-color : var(--code-orange) !important;
-	color: var(--code-orange) !important;
-	background-color: rgba(0, 0, 0, 0);
+  border-color: var(--code-orange) !important;
+  color: var(--code-orange) !important;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #image-preview-container button:hover {
-	background-color: var(--code-orange) !important;
-	color: #000000 !important;
+  background-color: var(--code-orange) !important;
+  color: #000000 !important;
 }
 
 /* --------------------------------------------------- Section styling */
 
-
 .section {
-	max-width: 1000px;
-	margin-top: 80px;
+  max-width: 1000px;
+  margin-top: 80px;
 }
 
 .box {
-	background-color: var(--box-bg);
-	box-shadow:
-		30px 40px 20px 2px rgba(0, 0, 0, 0.6);
+  background-color: var(--box-bg);
+  box-shadow: 30px 40px 20px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* --------------------------------------------------- Header box */
 
-
 .header-blurb {
-	color: var(--code-orange);
+  color: var(--code-orange);
 }
 
 .heading-text {
-	font-family: 'Source Code Pro', monospace;
-	color: var(--code-blue);
+  font-family: "Source Code Pro", monospace;
+  color: var(--code-blue);
 }
 
 .header-inner-code {
-	font-family: 'Source Code Pro', monospace;
-	color: var(--code-light-blue);
+  font-family: "Source Code Pro", monospace;
+  color: var(--code-light-blue);
 }
 
 .logo {
-	display: flex;
-	width: 236px;
-	flex-direction: row;
-    align-content: center;
-	white-space: nowrap;
+  display: flex;
+  width: 236px;
+  flex-direction: row;
+  align-content: center;
+  white-space: nowrap;
 }
 
 /* --------------------------------------------------- Tech section */
 
 .animated-progress {
-	height: 30px;
-	border-radius: 10px;
-	margin: 20px 20px 10px 0px;
-	overflow: hidden;
-	position: relative;
-	background-color: rgba(255, 255, 255, 0.05);;
+  height: 30px;
+  border-radius: 10px;
+  margin: 20px 20px 10px 0px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .animated-progress span {
-	height: 100%;
-	display: block;
-	border-radius: 10px;
-	width: 0;
-	color: rgb(255, 255, 255);
-	line-height: 30px;
-	position: absolute;
-	padding-right: 5px;
-	padding-left: 10px;
-	font-weight: 600;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  width: 0;
+  color: rgb(255, 255, 255);
+  line-height: 30px;
+  position: absolute;
+  padding-right: 5px;
+  padding-left: 10px;
+  font-weight: 600;
 }
 
 .progress-orange span {
-	background-color: rgb(232,83,37);
-
+  background-color: rgb(232, 83, 37);
 }
 .progress-blue span {
-	background-color: rgb(35,75,228);
-
+  background-color: rgb(35, 75, 228);
 }
 .progress-purple span {
-	background-color: rgb(125,19,248);
+  background-color: rgb(125, 19, 248);
 }
 .progress-yellow span {
-	background-color: rgb(244,220,28);
-	color: rgb(22, 22, 22);
+  background-color: rgb(244, 220, 28);
+  color: rgb(22, 22, 22);
 }
 
 .progress-jquery span {
-	background-color: rgb(11,107,172);
+  background-color: rgb(11, 107, 172);
 }
 
 .progress-django span {
-	background-color: #0C3C26;
+  background-color: #0c3c26;
+}
+.progress-django span {
+  background-color: #149eca;
 }
 
-
 .progress-python span {
-	background-color: rgb(251, 223, 89);
-	color: rgb(22, 22, 22);
+  background-color: rgb(251, 223, 89);
+  color: rgb(22, 22, 22);
 }
 
 .progress-flask span {
-	background-color: rgb(251, 251, 251);
-	color: rgb(0, 0, 0);
+  background-color: rgb(251, 251, 251);
+  color: rgb(0, 0, 0);
 }
 
 .progress-lua span {
-	background-color: #040483;
+  background-color: #040483;
 }
 
 .progress-vba span {
-	background-color: #247344;
+  background-color: #247344;
 }
 
 .progress-mysql span {
-	background-color: #2596be;
-	color: rgb(22, 22, 22);
+  background-color: #2596be;
+  color: rgb(22, 22, 22);
 }
 
 /* --------------------------------------------------- Certification section */
 
 table td {
-	background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 /* --------------------------------------------------- Project section */
 
 #project-container td {
-	color: var(--code-orange);
+  color: var(--code-orange);
 }
 
 #project-container td:nth-child(even) {
-	color: white;
+  color: white;
 }
 
 /* --------------------------------------------------- Project section buttons */
 
 .btn-portfolio {
-	text-decoration: none;
-	background-color: var(--box-bg) !important;
-	color: var(--code-orange) !important;
-	border: 1px solid var(--code-orange);
-	border-radius: 4px;
-	padding: 5px 10px;
-	margin-right: 5px;
+  text-decoration: none;
+  background-color: var(--box-bg) !important;
+  color: var(--code-orange) !important;
+  border: 1px solid var(--code-orange);
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-right: 5px;
 }
 
 .btn-portfolio:hover {
-	background-color: var(--code-orange) !important;
-	color: var(--box-bg) !important;
-	border-color: var(--code-orange) !important;
+  background-color: var(--code-orange) !important;
+  color: var(--box-bg) !important;
+  border-color: var(--code-orange) !important;
 }
 
 .btn-portfolio:active {
-	color: var(--white) !important;
+  color: var(--white) !important;
 }
 
-
 .btn-dark:hover {
-	color: var(--box-bg) !important;
+  color: var(--box-bg) !important;
 }
 /* --------------------------------------------------- Left side Icons */
 
-
 #left-icons i {
-	color: var(--white);
-	padding: 5px 0;
+  color: var(--white);
+  padding: 5px 0;
 }
 
 #left-icons i:hover {
-	color: var(--aqua);
+  color: var(--aqua);
 }
 
 #left-icons i:active {
-	color: var(--white);
+  color: var(--white);
 }
 
 /* --------------------------------------------------- Reveal animation */
 
 .reveal {
-	position: relative;
-	transform: translateX(150px);
-	opacity: 0;
-	transition: 2s all ease;
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 2s all ease;
 }
 
 .reveal.active {
-	transform: translateY(0);
-	opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* --------------------------------------------------- Footer */
 
 footer {
-	background-color: var(--box-bg);
-	padding: 0 var(--page-border);
-	text-align: center;
-	padding: 10px 0;
+  background-color: var(--box-bg);
+  padding: 0 var(--page-border);
+  text-align: center;
+  padding: 10px 0;
 }
 
 footer * {
-	margin: 0;
+  margin: 0;
 }

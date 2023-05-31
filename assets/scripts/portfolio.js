@@ -9,6 +9,27 @@
 //   liveURL:'',
 // },
 export const portfolio = [
+  {
+    name: "Squad Up",
+    badges: [
+        "Full Stack",
+        "React",
+        "Django Rest Framework",
+        "Python",
+        "SQL",
+        "BootStrap",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "GitHub",
+        "Git",
+    ],
+    description: "Squad Up, using React create a component built application. This application uses API communication to provide live content.",
+    imageURL: "./assets/imgs/squad-up.webp",
+    imageAlt: "Gamer's-verse website snapshot.",
+    repoURL: "https://github.com/BobWritesCode/squadup_frontend",
+    liveURL: "https://squadup-frontend.herokuapp.com/",
+},
     {
         name: "Gamer's-verse",
         badges: [
