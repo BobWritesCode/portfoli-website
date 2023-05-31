@@ -220,23 +220,19 @@ nav {
   background-color: rgb(244, 220, 28);
   color: rgb(22, 22, 22);
 }
-
 .progress-jquery span {
   background-color: rgb(11, 107, 172);
 }
-
 .progress-django span {
   background-color: #0c3c26;
 }
-.progress-django span {
+.progress-react span {
   background-color: #149eca;
 }
-
 .progress-python span {
   background-color: rgb(251, 223, 89);
   color: rgb(22, 22, 22);
 }
-
 .progress-flask span {
   background-color: rgb(251, 251, 251);
   color: rgb(0, 0, 0);
