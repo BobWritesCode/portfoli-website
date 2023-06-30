@@ -13,14 +13,19 @@ export type TechSkills = {
 
 export const techSkills = [
   {
-    dataText: "Python",
-    dataProgress: "85",
-    css: "progress-python",
-  },
-  {
     dataText: "Django",
     dataProgress: "85",
     css: "progress-django",
+  },
+  {
+    dataText: "React",
+    dataProgress: "80",
+    css: "progress-react",
+  },
+  {
+    dataText: "Python",
+    dataProgress: "85",
+    css: "progress-python",
   },
   {
     dataText: "TypeScript",
