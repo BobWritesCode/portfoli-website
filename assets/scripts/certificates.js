@@ -7,6 +7,12 @@
 // },
 export const certificates = [
     {
+        icon: '<i class="fa-solid fa-o">',
+        institute: "Code&nbspInstitute",
+        certName: 'Full Stack Developer Diploma',
+        certURL: "ci_full_stack_diploma.png",
+    },
+    {
         icon: '<i class="bi bi-award"></i>',
         institute: "Code&nbspAcademy",
         certName: "Intermediate TypeScript course",
@@ -53,12 +59,6 @@ export const certificates = [
         institute: "Code&nbspAcademy",
         certName: "Learn TypeScript",
         certURL: "ca_typescript_learn_typescript.png",
-    },
-    {
-        icon: '<i class="fa-solid fa-o">',
-        institute: "Code&nbspInstitute",
-        certName: 'Full Stack Developer Diploma<em class="text-light">(In&nbspprogress)</em>',
-        certURL: "",
     },
     {
         icon: '<i class="fa-brands fa-linkedin">',
