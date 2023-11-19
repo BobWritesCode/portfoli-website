@@ -13,10 +13,10 @@ export const certificates = [
         certURL: "ci_full_stack_diploma.png",
     },
     {
-      icon: '<i class="bi bi-award"></i>',
-      institute: "Codecademy",
-      certName: "Learn C# Course",
-      certURL: "ca_learn_C_sharp_course.png",
+        icon: '<i class="bi bi-award"></i>',
+        institute: "Codecademy",
+        certName: "Learn C# Course",
+        certURL: "ca_learn_C_sharp_course.png",
     },
     {
         icon: '<i class="bi bi-award"></i>',
